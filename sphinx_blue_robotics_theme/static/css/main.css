@@ -1,0 +1,81 @@
+/* Overrides for the Sphinx Blue Robotics theme */
+
+/* General */
+:root > * {
+    --theme-primary-color: #2c99ce;
+    --theme-black-color: #000;
+    --theme-white-color: #fff;
+    --theme-dark-color: #1d252c;
+    --theme-gray-color: #555555;
+
+    --md-primary-fg-color: var(--theme-primary-color);
+    --theme-header-text-color: var(--theme-black-color);
+    --theme-heading-text-color: var(--theme-dark-color);
+}
+
+/* Header */
+.md-header {
+    background-color: var(--theme-white-color);
+    color: var(--theme-header-text-color);
+}
+
+.md-header--shadow {
+    box-shadow: 1px 2px 15px rgba(100, 100, 100, 0.3);
+}
+
+.md-header__topic:first-child {
+    font-weight: bold;
+}
+
+/* Search */
+.md-search__form {
+    background-color: var(--theme-white-color);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: var(--theme-header-text-color);
+}
+
+.md-search__input::placeholder{
+    color: var(--theme-header-text-color);
+}
+
+.md-search__input+.md-search__icon {
+    color: var(--theme-header-text-color);
+}
+
+/* Content */
+article h1,
+.md-typeset h1 {
+    color: var(--theme-gray-color);
+    font-weight: bold;
+}
+
+article h2,
+.md-typeset h2 {
+    color: var(--theme-primary-color);
+    font-weight: bold;
+}
+
+article h3,
+.md-typeset h3 {
+    color: var(--theme-heading-text-color);
+    font-weight: bold;
+}
+
+article h4,
+.md-typeset h4 {
+    color: var(--theme-heading-text-color);
+    font-weight: bold;
+}
+
+article h5,
+.md-typeset h5 {
+    color: var(--theme-heading-text-color);
+    font-weight: bold;
+}
+
+article h6,
+.md-typeset h6 {
+    color: var(--theme-heading-text-color);
+    font-weight: bold;
+}

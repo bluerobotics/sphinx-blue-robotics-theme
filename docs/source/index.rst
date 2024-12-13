@@ -29,5 +29,8 @@ Coming soon.
 
 .. toctree::
   :hidden:
-
+  
+  installation
+  quickstart
+  commands
   examples/index

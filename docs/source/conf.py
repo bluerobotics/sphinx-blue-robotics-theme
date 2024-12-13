@@ -18,12 +18,14 @@ extensions = [
     "sphinx.ext.extlinks",
     "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
+    "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
     "sphinx.ext.githubpages",
     "sphinx_blue_robotics_theme",
     "sphinx_immaterial.graphviz",
     "myst_parser",
     "sphinx_design",
+    "sphinxcontrib.mermaid"
 ]
 master_doc = "index"
 source_suffix = [".rst", ".md"]

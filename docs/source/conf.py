@@ -14,12 +14,16 @@ author = "Blue Robotics Project Contributors"
 # General configuration
 extensions = [
     "sphinx.ext.autodoc",
-    "sphinx.ext.todo",
-    "sphinx.ext.mathjax",
-    "sphinx.ext.githubpages",
+    "sphinx.ext.doctest",
     "sphinx.ext.extlinks",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.githubpages",
     "sphinx_blue_robotics_theme",
+    "sphinx_immaterial.graphviz",
     "myst_parser",
+    "sphinx_design",
 ]
 master_doc = "index"
 source_suffix = [".rst", ".md"]
@@ -39,6 +43,7 @@ myst_enable_extensions = ["colon_fence"]
 # HTML output configuration
 html_theme = "sphinx_blue_robotics_theme"
 html_theme_path = ["../.."]
+html_logo = "_static/logo.png"
 html_theme_options = {
 }
 # end html_theme_options

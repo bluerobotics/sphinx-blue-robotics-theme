@@ -20,9 +20,9 @@ This theme extends the `sphinx-immaterial <https://jbms.github.io/sphinx-immater
 Installation
 ------------
 
-Coming soon.
+More info coming soon.
 
 License
 -------
 
-Coming soon.
+More info coming soon.

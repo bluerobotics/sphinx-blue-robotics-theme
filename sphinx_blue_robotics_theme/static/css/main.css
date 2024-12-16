@@ -62,9 +62,15 @@
     color: var(--theme-header-text-color);
 }
 
-/* Sidebar */
+/* Left sidebar */
 .md-sidebar {
     top: 3.5rem;
+}
+
+
+/* Right sidebar */
+.objinfo-icon {
+    display: none;
 }
 
 /* Content */

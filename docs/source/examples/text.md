@@ -146,4 +146,4 @@ Renders:
 ## See also
 
 - [MyST Parser: Typography](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html)
-- [Sphinx: reStructuredText basics](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
+- [Sphinx: reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)

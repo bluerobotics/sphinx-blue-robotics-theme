@@ -11,7 +11,7 @@ SOURCEDIR     = source
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCEDIR)
-AUTOBUILDOPTS   = --ignore "source/cpp_api/*"
+AUTOBUILDOPTS   = --ignore "source/python_api/*" --ignore "source/cpp_api/*" --ignore "source/lua_api/*"
 TESTSPHINXOPTS  = $(ALLSPHINXOPTS) -W --keep-going
 
 .PHONY: all

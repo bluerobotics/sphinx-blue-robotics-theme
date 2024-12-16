@@ -32,5 +32,6 @@ Coming soon.
   
   installation
   quickstart
+  customization
   commands
   examples/index

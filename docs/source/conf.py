@@ -50,7 +50,30 @@ myst_enable_extensions = ["substitution", "colon_fence"]
 html_theme = "sphinx_blue_robotics_theme"
 html_theme_path = ["../.."]
 html_logo = "_static/logo.png"
+# "html_favicon = "_static/images/favicon.ico""
 html_theme_options = {
+    "site_url": "https://sphinx-theme.bluerobotics.com",
+    "repo_url": "https://github.com/bluerobotics/sphinx-blue-robotics-theme",
+    "repo_name": "sphinx-blue-robotics-theme",
+    "edit_uri": "blob/master/docs/source",
+        "features": [
+        #"navigation.expand",
+        # "navigation.tabs",
+        # "toc.integrate",
+        "navigation.sections",
+        # "navigation.instant",
+        # "header.autohide",
+        "navigation.top",
+        # "navigation.tracking",
+        # "search.highlight",
+        #"search.share",
+        "toc.follow",
+        "toc.sticky",
+        "content.tabs.link",
+        "announce.dismiss",
+    ],
+    "toc_title_is_page_title": True,
+    "globaltoc_collapse": False,
 }
 
 html_last_updated_fmt = "%d %b %Y"

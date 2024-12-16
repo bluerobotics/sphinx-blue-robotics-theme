@@ -51,4 +51,4 @@ Renders:
 ## See also
 
 - [MyST Parser: Images and figures](https://myst-parser.readthedocs.io/en/latest/syntax/images_and_figures.html)
-- [Sphinx: reStructuredText basics](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
+- [Sphinx: reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)

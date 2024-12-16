@@ -97,4 +97,4 @@ Renders:
 ## See also
 
 - [MyST Parser: Cross-references](https://myst-parser.readthedocs.io/en/latest/syntax/cross-referencing.html)
-- [Sphinx: reStructuredText basics](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
+- [Sphinx: reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)

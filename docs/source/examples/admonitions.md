@@ -103,4 +103,4 @@ This indicates a critical error or something that must be avoided.
 
 - [Sphinx Immaterial: Admonitions](https://jbms.github.io/sphinx-immaterial/admonitions.html)
 - [MyST Parser: Admonitions](https://myst-parser.readthedocs.io/en/latest/syntax/admonitions.html)
-- [Sphinx: restructuredText basics](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
+- [Sphinx: reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)

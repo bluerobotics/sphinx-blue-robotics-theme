@@ -60,4 +60,5 @@ console.log("Hello, world!");
 
 ## See also
 
-- [Sphinx: reStructuredText basics](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
+- [Myst Parser: Source code and APIs](https://myst-parser.readthedocs.io/en/latest/syntax/code_and_apis.html)
+- [Sphinx: reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)

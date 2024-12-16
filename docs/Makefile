@@ -11,6 +11,7 @@ SOURCEDIR     = source
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCEDIR)
+AUTOBUILDOPTS   = --ignore "source/cpp_api/*"
 TESTSPHINXOPTS  = $(ALLSPHINXOPTS) -W --keep-going
 
 .PHONY: all
@@ -23,7 +24,8 @@ setupenv:
 
 .PHONY: setup
 setup:
-	$(POETRY) install
+	$(POETRY) install --all-extras
+
 
 .PHONY: update
 update:
@@ -45,7 +47,7 @@ singlehtml: setup
 
 .PHONY: preview
 preview: setup
-	$(POETRY) run sphinx-autobuild -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml --port 5500
+	$(POETRY) run sphinx-autobuild -b dirhtml $(ALLSPHINXOPTS) $(AUTOBUILDOPTS) $(BUILDDIR)/dirhtml --port 5500
 
 # Testing commands
 .PHONY: test

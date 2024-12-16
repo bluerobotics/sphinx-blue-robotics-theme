@@ -109,3 +109,21 @@ article h6,
     color: var(--theme-heading-text-color);
     font-weight: bold;
 }
+
+details.sd-dropdown {
+    margin: 0;
+    padding: 0;
+}
+
+details.sd-dropdown .sd-summary-title {
+    margin: 0;
+}
+
+details.sd-dropdown summary {
+    width: 100%;
+}
+
+details.sd-dropdown summary:before,
+details.sd-dropdown summary:after {
+    display: none;
+}

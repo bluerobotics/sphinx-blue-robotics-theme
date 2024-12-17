@@ -8,6 +8,7 @@
     --theme-dark-color: #1d252c;
     --theme-gray-color: #555555;
 
+    --md-accent-fg-color: var(--theme-primary-color);
     --md-primary-fg-color: var(--theme-primary-color);
     --theme-header-text-color: var(--theme-black-color);
     --theme-heading-text-color: var(--theme-dark-color);

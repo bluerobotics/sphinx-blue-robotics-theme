@@ -31,12 +31,12 @@ Renders:
 ### Local image
 
 ```md
-![A sample image](/_static/logo.png)
+![A sample image](/_static/sample.png)
 ```
 
 Renders:
 
-![A sample image](/_static/logo.png)
+![A sample image](/_static/sample.png)
 
 ### Image with title
 

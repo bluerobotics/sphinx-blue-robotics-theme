@@ -1,3 +1,4 @@
+{% if not exclude_comments %}
 <!--
   Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
 
@@ -21,6 +22,7 @@
 
   Modified by Blue Robotics, Inc. to include a custom header distribution.
 -->
+{% endif %}
 
 <!-- Determine class according to configuration -->
 {% set class = "md-nav md-nav--primary" %}
@@ -41,7 +43,7 @@
   <!-- Site title -->
   <label class="md-nav__title" for="__drawer">
     <a
-      href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
+      href="{{ homepage_url | d(nav.homepage.url, true) | url }}"
       title="{{ config.site_name | e }}"
       class="md-nav__button md-logo"
       aria-label="{{ config.site_name }}"
@@ -49,7 +51,9 @@
     >
       {% include "partials/logo.html" %}
     </a>
-    {{ config.site_name }}
+    <a href="{{ project_url }}">
+    {{ project }}
+    </a>
   </label>
 
   <!-- Repository information -->

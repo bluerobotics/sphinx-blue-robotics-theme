@@ -53,7 +53,16 @@
       {% include ".icons/material/menu" ~ ".svg" %}
     </label>
 
-
+    <!-- Icon -->
+    <a
+    href="{{ homepage_url | d(nav.homepage.url, true) | url }}"
+    title="{{ config.site_name | e }}"
+    class="icon"
+    aria-label="{{ config.site_name }}"
+    >
+    {% include "partials/icon.html" %}
+    </a>
+    
     <!-- Button to open search modal -->
     {% if "search" in config.plugins %}
       <label class="md-header__button md-icon" for="__search">

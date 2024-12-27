@@ -180,8 +180,27 @@ body[data-md-color-scheme="slate"] .md-header--shadow {
         color: var(--theme-white-color);
         border-radius: 4px;
         padding: 10px 15px;
+        position: absolute;
+        top: 1em;
+    }
+
+    .md-nav--primary > .md-nav__list {
+        margin-top: 3em;
     }
 }
+
+/* Icon */
+.md-header .icon{
+    margin-right: auto;
+    height: 34px;
+}
+
+@media screen and (min-width: 76.25em) {
+    .md-header .icon {
+        display: none;
+    }
+}
+
 
 /* Layout */
 .md-main__inner {

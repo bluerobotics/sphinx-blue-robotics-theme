@@ -49,8 +49,8 @@ myst_enable_extensions = ["substitution", "colon_fence"]
 # HTML output configuration
 html_theme = "sphinx_blue_robotics_theme"
 html_theme_path = ["../.."]
-html_logo = "_static/logo.png"
-# "html_favicon = "_static/images/favicon.ico""
+html_static_path= ["_static"]
+html_favicon = "_static/favicon.ico"
 html_theme_options = {
     "site_url": "https://sphinx-theme.bluerobotics.com",
     "repo_url": "https://github.com/bluerobotics/sphinx-blue-robotics-theme",
@@ -58,7 +58,6 @@ html_theme_options = {
     "globaltoc_collapse": False,
     "edit_uri": "blob/master/docs/source",
         "features": [
-        #"navigation.expand",
         "navigation.sections",
         "navigation.megamenu",
         "navigation.top",
@@ -66,6 +65,24 @@ html_theme_options = {
         "toc.sticky",
         "content.tabs.link",
         "announce.dismiss",
+    ],
+    "palette": [
+        {
+            "media": "(prefers-color-scheme: light)",
+            "scheme": "default",
+            "toggle": {
+                "icon": "octicons/moon-16",
+                "name": "Switch to dark mode",
+            }
+        },
+        {
+            "media": "(prefers-color-scheme: dark)",
+            "scheme": "slate",
+            "toggle": {
+                "icon": "octicons/sun-16",
+                "name": "Switch to light mode",
+            }
+        },
     ],
     "toc_title_is_page_title": True,
 }

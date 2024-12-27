@@ -65,12 +65,12 @@ Renders:
 You can also link to a file on your website or local directory:
 
 ```md
-[Download the image](/_static/logo.png)
+[Download the image](/_static/img/sample.png)
 ```
 
 Renders:
 
-[Download the image](/_static/logo.png)
+[Download the image](/_static/sample.png)
 
 ### Link with anchor text
 

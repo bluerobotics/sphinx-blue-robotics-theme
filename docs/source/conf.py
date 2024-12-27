@@ -55,32 +55,29 @@ html_theme_options = {
     "site_url": "https://sphinx-theme.bluerobotics.com",
     "repo_url": "https://github.com/bluerobotics/sphinx-blue-robotics-theme",
     "repo_name": "sphinx-blue-robotics-theme",
+    "globaltoc_collapse": False,
     "edit_uri": "blob/master/docs/source",
         "features": [
         #"navigation.expand",
-        # "navigation.tabs",
-        # "toc.integrate",
         "navigation.sections",
-        # "navigation.instant",
-        # "header.autohide",
+        "navigation.megamenu",
         "navigation.top",
-        # "navigation.tracking",
-        # "search.highlight",
-        #"search.share",
         "toc.follow",
         "toc.sticky",
         "content.tabs.link",
         "announce.dismiss",
     ],
     "toc_title_is_page_title": True,
-    "globaltoc_collapse": False,
 }
 
 html_last_updated_fmt = "%d %b %Y"
 htmlhelp_basename = "BlueRoboticsDocumentationdoc"
-html_baseurl = "https://sphinx-theme.bluerobotics.com"
-html_context = {"html_baseurl": html_baseurl}
-
+html_baseurl = "https://docs.bluerobotics.com/sphinx-theme"
+html_context = {
+    "homepage_url": "https://bluerobotics.com",
+    "project_url": html_baseurl, 
+    "project": project, 
+    "exclude_comments": True}
 # Autodoc configuration (Python documentation)
 autodoc2_packages = [
     {

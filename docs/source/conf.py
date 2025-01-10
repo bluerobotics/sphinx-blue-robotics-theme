@@ -3,6 +3,12 @@ import os
 import sys
 from datetime import date
 
+# Global variables
+
+SITE_URL = "https://docs.bluerobotics.com/sphinx-theme/"
+REPO_URL = "https://github.com/bluerobotics/sphinx-blue-robotics-theme"
+REPO_NAME = "sphinx-blue-robotics-theme"
+PROJECT_NAME ="Blue Robotics Sphinx Theme"
 
 # Add the parent directory to the system path
 root_path = os.path.abspath(os.path.join("..", ".."))
@@ -10,8 +16,8 @@ root_path = os.path.abspath(os.path.join("..", ".."))
 sys.path.insert(0, root_path)
 
 # Project information
-project = "Blue Robotics Sphinx Theme"
-copyright = f"{date.today().year}, Blue Robotics. All rights reserved."
+project = PROJECT_NAME
+copyright = f"{date.today().year} - Blue Robotics Inc"
 author = "Blue Robotics contributors"
 
 # General configuration
@@ -23,13 +29,13 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
+    # "sphinx_sitemap",
+    "myst_parser",
     "sphinx_blue_robotics_theme",
     "sphinx_blue_robotics_theme.extensions.extras",
     "sphinx_blue_robotics_theme.extensions.python",
     "sphinx_blue_robotics_theme.extensions.cpp",
     "sphinx_blue_robotics_theme.extensions.lua",
-    "myst_parser", 
-
 ]
 master_doc = "index"
 source_suffix = {'.rst': 'restructuredtext', '.md': 'restructuredtext'}
@@ -52,9 +58,13 @@ html_theme_path = ["../.."]
 html_static_path= ["_static"]
 html_favicon = "_static/favicon.ico"
 html_theme_options = {
-    "site_url": "https://sphinx-theme.bluerobotics.com",
-    "repo_url": "https://github.com/bluerobotics/sphinx-blue-robotics-theme",
-    "repo_name": "sphinx-blue-robotics-theme",
+    "site_url": SITE_URL,
+    "repo_url": REPO_URL,
+    "repo_name": REPO_NAME,
+    "icon": {
+        "repo": "fontawesome/brands/github",
+        "edit": "material/file-edit-outline",
+    },
     "globaltoc_collapse": False,
     "edit_uri": "blob/master/docs/source",
         "features": [
@@ -89,7 +99,7 @@ html_theme_options = {
 
 html_last_updated_fmt = "%d %b %Y"
 htmlhelp_basename = "BlueRoboticsDocumentationdoc"
-html_baseurl = "https://docs.bluerobotics.com/sphinx-theme"
+html_baseurl = SITE_URL
 html_context = {
     "homepage_url": "https://bluerobotics.com",
     "project_url": html_baseurl, 
@@ -103,6 +113,9 @@ autodoc2_packages = [
 ]
 
 autodoc2_output_dir = "python_api"
+
+# Sitemap extension
+sitemap_url_scheme = "{link}"
 
 # Breathe configuration (CPP documentation)
 breathe_projects = {"myproject": root_path + "/src/cpp/xml"}

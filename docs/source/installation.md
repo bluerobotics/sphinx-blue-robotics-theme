@@ -14,13 +14,21 @@ Before getting started, make sure you have the following tools installed:
 
 To install Sphinx and this theme in a BlueRobotics project, follow these steps:
 
-1. Copy the `docs` folder from this repository into your own project.
+1. Copy the `docs` folder [from this repository](https://github.com/bluerobotics/sphinx-blue-robotics-theme) into your own project.
 
-2. Edit your documentation and `conf.py` as needed.
+2. Edit your `conf.py` global variables with your project details:
 
-   More info coming soon.
+   ```python
+   SITE_URL = "https://docs.bluerobotics.com/sphinx-theme/"
+   REPO_URL = "https://github.com/bluerobotics/sphinx-blue-robotics-theme"
+   REPO_NAME = "sphinx-blue-robotics-theme"
+   PROJECT_NAME ="Blue Robotics Sphinx Theme"
+   ```
 
-3. To view the documentation locally, run the following command:
+3. Edit your documentation as needed.
+
+
+4. To view the documentation locally, run the following command:
 
    ```bash
    make preview

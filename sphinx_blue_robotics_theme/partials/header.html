@@ -27,24 +27,16 @@
 <!-- Determine class according to configuration -->
 {% set class = "md-header" %}
 {% if "navigation.tabs.sticky" in features %}
-  {% set class = class ~ " md-header--lifted" %}
+{% set class = class ~ " md-header--lifted" %}
 {% endif %}
 
 <!-- Header -->
 <header class="{{ class }}" data-md-component="header">
-  <nav
-    class="md-header__inner md-grid"
-    aria-label="{{ lang.t('header.title') }}"
-  >
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header.title') }}">
 
     <!-- Link to home -->
-    <a
-      href="{{ homepage_url | d(nav.homepage.url, true) | url }}"
-      title="{{ config.site_name | e }}"
-      class="md-header__button md-logo"
-      aria-label="{{ config.site_name }}"
-      data-md-component="logo"
-    >
+    <a href="{{ homepage_url | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}"
+      class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
       {% include "partials/logo.html" %}
     </a>
 
@@ -54,110 +46,113 @@
     </label>
 
     <!-- Icon -->
-    <a
-    href="{{ homepage_url | d(nav.homepage.url, true) | url }}"
-    title="{{ config.site_name | e }}"
-    class="icon"
-    aria-label="{{ config.site_name }}"
-    >
-    {% include "partials/icon.html" %}
+    <a href="{{ homepage_url | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}"
+      class="mobile-logo" aria-label="{{ config.site_name }}">
+      {% include "partials/logo.html" %}
     </a>
-    
+
     <!-- Button to open search modal -->
     {% if "search" in config.plugins %}
-      <label class="md-header__button md-icon" for="__search">
-        {% include ".icons/material/magnify.svg" %}
-      </label>
+    <label class="md-header__button md-icon" for="__search">
+      {% include ".icons/material/magnify.svg" %}
+    </label>
 
-      <!-- Search interface -->
-      {% include "partials/search.html" %}
+    <!-- Search interface -->
+    {% include "partials/search.html" %}
     {% endif %}
 
     <!-- Custom mega menu  -->
     {% if "navigation.megamenu" in features %}
     <div class="md_header__mega-menu">
-      {% include "partials/megamenu.html" %}
+      <!-- Mobile icon -->
+      <label for="__drawer-right" class="mega-menu-item show-on-mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-layout-grid">
+          <rect width="7" height="7" x="3" y="3" rx="1" />
+          <rect width="7" height="7" x="14" y="3" rx="1" />
+          <rect width="7" height="7" x="14" y="14" rx="1" />
+          <rect width="7" height="7" x="3" y="14" rx="1" />
+        </svg>
+      </label>
+
+      <!-- Mega Menu desktop -->
+      <div class="md_header__mega-menu hide-on-mobile">
+        {% include "partials/megamenu.html" %}
+      </div>
+    </div>
+
+    <!-- Right Drawer Toggle -->
+    <input type="checkbox" id="__drawer-right" class="md-drawer-toggle" hidden />
+
+    <!-- Right Drawer Overlay -->
+    <label for="__drawer-right" class="md-overlay-right-drawer"></label>
+
+    <!-- Right Drawer -->
+    <nav class="md-drawer md-drawer-right show-on-mobile">
+      <div class="md-drawer__megamenu">
+        {% include "partials/rightdrawer.html" %}
+      </div>
+    </nav>
+    {% endif %}
+
+    <!-- Color palette -->
+    {% if not config.theme.palette is mapping %}
+    <form class="md-header__option" data-md-component="palette">
+      {% for option in config.theme.palette %}
+      {% set primary = option.primary | replace(" ", "-") | lower %}
+      {% set accent = option.accent | replace(" ", "-") | lower %}
+      <input class="md-option" data-md-color-media="{{ option.media }}" data-md-color-scheme="{{ option.scheme }}"
+        data-md-color-primary="{{ primary }}" data-md-color-accent="{{ accent }}" {% if option.toggle %}
+        aria-label="{{ option.toggle.name }}" {% else %} aria-hidden="true" {% endif %} type="radio" name="__palette"
+        id="__palette_{{ loop.index }}" />
+      {% if option.toggle %}
+      <label class="md-header__button md-icon" title="{{ option.toggle.name }}"
+        for="__palette_{{ loop.index0 or loop.length }}" hidden>
+        {% include ".icons/" ~ option.toggle.icon ~ ".svg" %}
+      </label>
+      {% endif %}
+      {% endfor %}
+    </form>
+    {% endif %}
+
+    <!-- Site language selector -->
+    {% if config.extra.alternate %}
+    <div class="md-header__option">
+      </form>
+      <div class="md-select">
+        {% set icon = config.theme.icon.alternate or "material/translate" %}
+        <button class="md-header__button md-icon" aria-label="{{ lang.t('select.language.title') }}">
+          {% include ".icons/" ~ icon ~ ".svg" %}
+        </button>
+        <div class="md-select__inner">
+          <ul class="md-select__list">
+            {% for alt in config.extra.alternate %}
+            <li class="md-select__item">
+              <a href="{{ alt.link | url }}" hreflang="{{ alt.lang }}" class="md-select__link">
+                {{ alt.name }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
     {% endif %}
 
-        <!-- Color palette -->
-        {% if not config.theme.palette is mapping %}
-        <form class="md-header__option" data-md-component="palette">
-          {% for option in config.theme.palette %}
-            {% set primary = option.primary | replace(" ", "-") | lower %}
-            {% set accent  = option.accent  | replace(" ", "-") | lower %}
-            <input
-              class="md-option"
-              data-md-color-media="{{ option.media }}"
-              data-md-color-scheme="{{ option.scheme }}"
-              data-md-color-primary="{{ primary }}"
-              data-md-color-accent="{{ accent }}"
-              {% if option.toggle %}
-                aria-label="{{ option.toggle.name }}"
-              {% else  %}
-                aria-hidden="true"
-              {% endif %}
-              type="radio"
-              name="__palette"
-              id="__palette_{{ loop.index }}"
-            />
-            {% if option.toggle %}
-              <label
-                class="md-header__button md-icon"
-                title="{{ option.toggle.name }}"
-                for="__palette_{{ loop.index0 or loop.length }}"
-                hidden
-              >
-                {% include ".icons/" ~ option.toggle.icon ~ ".svg" %}
-              </label>
-            {% endif %}
-          {% endfor %}
-        </form>
-      {% endif %}
-  
-      <!-- Site language selector -->
-      {% if config.extra.alternate %}
-        <div class="md-header__option"></form>
-          <div class="md-select">
-            {% set icon = config.theme.icon.alternate or "material/translate" %}
-            <button
-              class="md-header__button md-icon"
-              aria-label="{{ lang.t('select.language.title') }}"
-            >
-              {% include ".icons/" ~ icon ~ ".svg" %}
-            </button>
-            <div class="md-select__inner">
-              <ul class="md-select__list">
-                {% for alt in config.extra.alternate %}
-                  <li class="md-select__item">
-                    <a
-                      href="{{ alt.link | url }}"
-                      hreflang="{{ alt.lang }}"
-                      class="md-select__link"
-                    >
-                      {{ alt.name }}
-                    </a>
-                  </li>
-                  {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-  
     <!-- Repository information -->
     {% if config.repo_url %}
-      <div class="md-header__source">
-        {% include "partials/source.html" %}
-      </div>
+    <div class="md-header__source">
+      {% include "partials/source.html" %}
+    </div>
     {% endif %}
 
 
-  <!-- Navigation tabs (sticky) -->
-  {% if "navigation.tabs.sticky" in features %}
+    <!-- Navigation tabs (sticky) -->
+    {% if "navigation.tabs.sticky" in features %}
     {% if "navigation.tabs" in features %}
-      {% include "partials/tabs.html" %}
+    {% include "partials/tabs.html" %}
     {% endif %}
-  {% endif %}
+    {% endif %}
 
 </header>

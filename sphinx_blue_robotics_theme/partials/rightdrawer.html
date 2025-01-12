@@ -19,8 +19,30 @@
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
   IN THE SOFTWARE.
+
+  Modified by Blue Robotics, Inc. to include a custom header distribution.
 -->
 {% endif %}
-<!-- Logo -->
-<img src="{{ pathto('_static/img/logo-dark.png') }}" alt="logo" class="show-slate" />
-<img src="{{ pathto('_static/img/logo.png') }}" alt="logo" class="show-default" />
+
+<!-- Determine class according to configuration -->
+{% set class = "md-nav md-nav--primary" %}
+{% if "navigation.tabs" in features %}
+{% set class = class ~ " md-nav--lifted" %}
+{% endif %}
+{% if "toc.integrate" in features %}
+{% set class = class ~ " md-nav--integrated" %}
+{% endif %}
+
+<!-- Main navigation -->
+<nav class="{{ class }}" aria-label="{{ lang.t('nav.title') }}" data-md-level="0">
+  <!-- Render item list -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    {% for custom_item in right_drawer %}
+    {% set path = "__rightdrawer_" ~ loop.index %}
+    {% set level = 1 %}
+    {% with nav_item=custom_item %}
+    {% include "partials/nav-item.html" %}
+    {% endwith %}
+    {% endfor %}
+  </ul>
+</nav>

@@ -1,5 +1,5 @@
 ==========================
-sphinx-blue-robotics-theme
+Sphinx Blue Robotics Theme
 ==========================
 
 A customized toolchain for Blue Robotics documentation projects, built on the Sphinx framework.

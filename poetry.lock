@@ -1330,23 +1330,6 @@ six = "*"
 sphinxcontrib-luadomain = ">=1.1.1"
 
 [[package]]
-name = "sphinx-sitemap"
-version = "2.6.0"
-description = "Sitemap generator for Sphinx"
-optional = false
-python-versions = "*"
-files = [
-    {file = "sphinx_sitemap-2.6.0-py3-none-any.whl", hash = "sha256:7478e417d141f99c9af27ccd635f44c03a471a08b20e778a0f9daef7ace1d30b"},
-    {file = "sphinx_sitemap-2.6.0.tar.gz", hash = "sha256:5e0c66b9f2e371ede80c659866a9eaad337d46ab02802f9c7e5f7bc5893c28d2"},
-]
-
-[package.dependencies]
-sphinx = ">=1.2"
-
-[package.extras]
-dev = ["build", "flake8", "pre-commit", "pytest", "sphinx", "tox"]
-
-[[package]]
 name = "sphinxcontrib-applehelp"
 version = "2.0.0"
 description = "sphinxcontrib-applehelp is a Sphinx extension which outputs Apple help books"
@@ -1420,24 +1403,6 @@ files = [
 
 [package.dependencies]
 Sphinx = "*"
-
-[[package]]
-name = "sphinxcontrib-mermaid"
-version = "1.0.0"
-description = "Mermaid diagrams in yours Sphinx powered docs"
-optional = true
-python-versions = ">=3.8"
-files = [
-    {file = "sphinxcontrib_mermaid-1.0.0-py3-none-any.whl", hash = "sha256:60b72710ea02087f212028feb09711225fbc2e343a10d34822fe787510e1caa3"},
-    {file = "sphinxcontrib_mermaid-1.0.0.tar.gz", hash = "sha256:2e8ab67d3e1e2816663f9347d026a8dee4a858acdd4ad32dd1c808893db88146"},
-]
-
-[package.dependencies]
-pyyaml = "*"
-sphinx = "*"
-
-[package.extras]
-test = ["defusedxml", "myst-parser", "pytest", "ruff", "sphinx"]
 
 [[package]]
 name = "sphinxcontrib-qthelp"
@@ -1739,11 +1704,11 @@ files = [
 
 [extras]
 cpp = ["breathe", "exhale"]
-extras = ["sphinx-design", "sphinxcontrib-mermaid"]
+extras = ["sphinx-design"]
 lua = ["sphinx-lua"]
 python = ["sphinx-autodoc2"]
 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "b6470e92a6bd5865118551da1d8cfe8855cceadf83dd31e9f27934321419b222"
+content-hash = "f2d973063729158f2300283b763b2fd88541fc4fa0943991c9da23324559a87d"

@@ -24,40 +24,41 @@
 
 <!-- Copyright and theme information -->
 <div class="md-copyright">
-    {% if show_copyright %}
-      <span class="md-footer-copyright__highlight">
-        {%- if hasdoc('copyright') %}
-          {% trans path=pathto('copyright'), copyright=copyright|e %}&#169;
-            <a href="{{ path }}">Copyright</a> {{ copyright }}.
-          {% endtrans %}
-        {%- else %}
-          {% trans copyright=copyright|e %}Copyright {{ copyright }}
-          {% endtrans %}
-        {%- endif %}
-      </span>
+  {% if show_copyright %}
+  <span class="md-footer-copyright__highlight">
+    {%- if hasdoc('copyright') %}
+    {% trans path=pathto('copyright'), copyright=copyright|e %}&#169;
+    <a href="{{ path }}">Copyright</a> {{ copyright }}.
+    {% endtrans %}
+    {%- else %}
+    {% trans copyright=copyright|e %}Copyright {{ copyright }}
+    {% endtrans %}
+    {%- endif %}
+  </span>
 
-      <span class="footer-divider first">
-        |
-      </span>
-      <span>
-        <a href="https://bluerobotics.com/terms-conditions-privacy-policy-return-policy/" target="_blank">Terms & Conditions</a>
-      </span>
-      <span class="footer-divider">
-        |
-      </span>
-      <span>
-        <a href="https://bluerobotics.com/terms-conditions-privacy-policy-return-policy/" target="_blank">Privacy Policy</a>
-      </span>
-    {% endif %}
-    <div class="show-sphinx">
-      {% if show_sphinx %}
-        {% trans sphinx_version=sphinx_version|e %}Created using
-        <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
-        {{ sphinx_version }}
-        {% endtrans %} and
-        <a href="https://github.com/bluerobotics/sphinx-blue-robotics-theme/"
-          target="_blank" rel="noopener">Sphinx Blue Robotics Theme</a> {{blue_robotics_theme_version}}.
-      {%- endif %}
-      {{ rendered_extracopyright }}
-    </div>
+  <span class="footer-divider first">
+    |
+  </span>
+  <span>
+    <a href="https://bluerobotics.com/terms-conditions-privacy-policy-return-policy/" target="_blank">Terms &
+      Conditions</a>
+  </span>
+  <span class="footer-divider">
+    |
+  </span>
+  <span>
+    <a href="https://bluerobotics.com/terms-conditions-privacy-policy-return-policy/" target="_blank">Privacy Policy</a>
+  </span>
+  {% endif %}
+  <div class="show-sphinx">
+    {% if show_sphinx %}
+    {% trans sphinx_version=sphinx_version|e %}Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    {{ sphinx_version }}
+    {% endtrans %} and
+    <a href="https://github.com/bluerobotics/sphinx-blue-robotics-theme/" target="_blank" rel="noopener">Sphinx Blue
+      Robotics Theme</a> {{blue_robotics_theme_version}}.
+    {%- endif %}
+    {{ rendered_extracopyright }}
   </div>
+</div>

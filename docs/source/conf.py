@@ -25,11 +25,11 @@ extensions = [
     "sphinx.ext.doctest",
     "sphinx.ext.extlinks",
     "sphinx.ext.githubpages",
+    "sphinx.ext.extlinks",
     "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
-    # "sphinx_sitemap",
     "myst_parser",
     "sphinx_blue_robotics_theme",
     "sphinx_blue_robotics_theme.extensions.extras",
@@ -41,7 +41,7 @@ master_doc = "index"
 source_suffix = {'.rst': 'restructuredtext', '.md': 'restructuredtext'}
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-# Syntax highlighting style
+# Syntax highlighting
 pygments_style = "sphinx"
 
 # Substitutions
@@ -49,8 +49,8 @@ myst_substitutions = {
   "project_name": "Blue Robotics"
 }
 
-# Myst Parser options
-myst_enable_extensions = ["substitution", "colon_fence"]
+# External links
+extlinks = {'issue': (REPO_URL + '/issues/%s', 'issue %s')}
 
 # HTML output configuration
 html_theme = "sphinx_blue_robotics_theme"
@@ -105,6 +105,10 @@ html_context = {
     "project_url": html_baseurl, 
     "project": project, 
     "exclude_comments": True}
+
+# Myst Parser options
+myst_enable_extensions = ["substitution", "colon_fence"]
+
 # Autodoc configuration (Python documentation)
 autodoc2_packages = [
     {
@@ -113,9 +117,6 @@ autodoc2_packages = [
 ]
 
 autodoc2_output_dir = "python_api"
-
-# Sitemap extension
-sitemap_url_scheme = "{link}"
 
 # Breathe configuration (CPP documentation)
 breathe_projects = {"myproject": root_path + "/src/cpp/xml"}

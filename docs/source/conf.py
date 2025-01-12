@@ -50,13 +50,14 @@ myst_substitutions = {
 }
 
 # External links
-extlinks = {'issue': (REPO_URL + '/issues/%s', 'issue %s')}
+extlinks = {
+    'issue': (REPO_URL + '/issues/%s', 'issue %s')
+    }
 
 # HTML output configuration
 html_theme = "sphinx_blue_robotics_theme"
 html_theme_path = ["../.."]
 html_static_path= ["_static"]
-html_favicon = "_static/favicon.ico"
 html_theme_options = {
     "site_url": SITE_URL,
     "repo_url": REPO_URL,

@@ -1,7 +1,7 @@
 def setup(app):
 
     extensions = [
-        "sphinx_design", "sphinxcontrib.mermaid",
+        "sphinx_design",
     ]
 
     for ext in extensions:

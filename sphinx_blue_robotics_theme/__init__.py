@@ -94,6 +94,8 @@ def update_context(app, pagename, templatename, context, doctree):
     file_meta = context.get("meta", None) or {}
     context["blue_robotics_theme_version"] = version
     context["right_drawer"] = _build_right_drawer()
+    context["favicon_url"] = app.config.html_static_path[0] + "/favicon.ico"
+
 
 def setup(app):
     """Setup theme"""

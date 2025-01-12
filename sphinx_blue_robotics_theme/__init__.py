@@ -101,8 +101,8 @@ def setup(app):
     """Setup theme"""
     app.add_html_theme("sphinx_blue_robotics_theme", path.abspath(path.dirname(__file__)))
     app.add_css_file("css/main.css", priority=600)
-    app.add_js_file("js/jquery.min.js", priority=600)
-    app.add_js_file("js/main.js", priority=500)
+    app.add_js_file("js/jquery.min.js", priority=100)
+    app.add_js_file("js/main.js", priority=600)
 
     app.connect("html-page-context", update_context)
 

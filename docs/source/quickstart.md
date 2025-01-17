@@ -47,5 +47,3 @@ You can edit documentation in either Markdown (`.md`) or reStructuredText (`.rst
 For day-to-day examples on how to work with components, refer to [Examples](examples/index.md).
 
 Once you're happy with your changes, submit a pull request and describe the changes you made.
-
-By following this guide, you'll be able to effectively contribute to BlueRobotics' documentation. Happy documenting!

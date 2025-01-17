@@ -17,10 +17,23 @@ This theme extends the `sphinx-immaterial <https://jbms.github.io/sphinx-immater
 - **Multiversion support:** Includes a dropdown menu for switching between different versions of the documentation.
 - **Built-in extensions:** Pre-configured extensions tailored for use in all Blue Robotics documentation projects.
 
-Installation
-------------
+Prerequisites
+-------------
 
-More info coming soon.
+Before getting started, make sure you have the following tools installed:
+
+- Git
+- Python 3.12 or higher
+- Make
+- `Poetry <https://python-poetry.org/>`_
+
+Quickstart
+----------
+
+.. code-block:: bash
+
+   cd docs
+   make preview
 
 License
 -------

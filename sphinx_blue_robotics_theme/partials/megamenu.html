@@ -1,0 +1,34 @@
+{% for section in right_drawer %}
+<nav class="mega-menu mega-menu-{{ section.title | lower }}">
+  <ul>
+    <li class="mega-menu-item mega-menu-item_l1">
+      <a class="mega-menu-title" href="{{ section.url }}" 
+         {% if section.children %} tabindex="0" aria-haspopup="true" aria-expanded="false" role="button" {% endif %}>
+        {{ section.title }}<span class="mega-indicator"></span>
+      </a>
+      {% if section.children %}
+      <ul class="mega-sub-menu">
+        {% for child in section.children %}
+        <li class="mega-menu-item mega-menu-item_l2">
+          <a class="mega-menu-header" href="{{ child.url }}">
+            {{ child.title }}
+          </a>
+          {% if child.children %}
+          <ul class="mega-sub-menu">
+            {% for subchild in child.children %}
+            <li>
+              <a class="mega-menu-link" href="{{ subchild.url }}">
+                {{ subchild.title }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+  </ul>
+</nav>
+{% endfor %}

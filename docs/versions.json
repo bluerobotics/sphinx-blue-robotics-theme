@@ -1,0 +1,19 @@
+{
+  "versions": [
+    {
+      "name": "latest",
+      "branch": "v1.0.x",
+      "is_default": true
+    },
+    {
+      "name": "0.9",
+      "branch": "v0.9.x",
+      "is_default": false
+    },
+    {
+      "name": "master",
+      "branch": "master",
+      "is_default": false
+    }
+  ]
+} 

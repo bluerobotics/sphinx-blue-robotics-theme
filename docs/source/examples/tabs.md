@@ -4,6 +4,15 @@ Tabs organize and allow navigation between groups of content that are related an
 
 We rely on the [Sphinx Design extension](https://github.com/executablebooks/sphinx-design) for implementing tabs.
 
+## Installation
+
+To have tabs support, you'll need to install the `extras` package by adding it to your `pyproject.toml` file:
+
+```
+[tool.poetry.extras]
+sphinx-blue-robotics-theme = { version = "^0.0.1", extras = ["extras"] }
+```
+
 ## Syntax
 
 In MyST Markdown, tabs are created using the `:::{tab-set}` and `:::{tab-item}` directives. The basic format is:

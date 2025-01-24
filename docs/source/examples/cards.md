@@ -4,6 +4,15 @@ Cards are a visually appealing way to present content. They can be used to highl
 
 We rely on the [Sphinx Design extension](https://github.com/executablebooks/sphinx-design) for implementing cards.
 
+## Installation
+
+To have cards support, you'll need to install the `extras` package by adding it to your `pyproject.toml` file:
+
+```
+[tool.poetry.extras]
+sphinx-blue-robotics-theme = { version = "^0.0.1", extras = ["extras"] }
+```
+
 ## Syntax
 
 In MyST Markdown, cards are created using the `:::{card}` directive and grouped with the `::::{grid}` directive. The basic format is:

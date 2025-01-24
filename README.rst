@@ -35,6 +35,15 @@ Quickstart
    cd docs
    make preview
 
+Release a new theme version
+---------------------------
+
+To release a new theme version:
+
+1. Update the version in the `pyproject.toml` file.
+2. Run `poetry build` to build the package.
+3. Run `poetry publish` to publish the package to the Python Package Index.
+
 License
 -------
 

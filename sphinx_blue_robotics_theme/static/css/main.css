@@ -266,6 +266,10 @@ body[data-md-color-scheme="slate"] .md-header--shadow {
 }
 
 /* Right sidebar */
+.version-switcher select {
+	margin: 20px;
+}
+
 .objinfo-icon {
 	display: none;
 }

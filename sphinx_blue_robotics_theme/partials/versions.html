@@ -1,0 +1,24 @@
+{%- if versions %}
+<div class="version-switcher">
+  <select onchange="switchVersion(this.value)">
+    {%- for version in versions %}
+      {%- if version.name not in theme_exclude_versions %}
+      <option value="{{ version.name }}"
+              {% if version.name == current_version_name %}selected="selected"{% endif %}>
+        {{ version.name }}
+      </option>
+      {%- endif %}
+    {%- endfor %}
+  </select>
+</div>
+
+<script>
+  function switchVersion(version) {
+    const currentPath = window.location.pathname;
+    const pathSegments = currentPath.split('/');
+    pathSegments[1] = version;
+    const newPath = pathSegments.join('/');    
+    window.location.href = newPath;
+  }
+</script>
+{% endif %} 

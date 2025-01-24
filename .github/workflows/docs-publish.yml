@@ -23,6 +23,9 @@ jobs:
       - name: Install dependencies
         run: make -C docs setupenv
 
+      - name: Install Doxygen (optional)
+        run: sudo apt-get update && sudo apt-get install -y doxygen
+
       - name: Build docs
         run: make -C docs dirhtml
 

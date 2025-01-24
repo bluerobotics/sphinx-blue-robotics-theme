@@ -2,7 +2,34 @@
 
 You can automatically create API references and other documentation directly from your source code to keep your documentation up-to-date with the latest code changes.
 
-The MyST parser supports generating documentation for various programming languages, including Python, C++, and Lua. This approach allows you to integrate code documentation with your project’s general documentation, reducing manual effort and ensuring consistency.
+## Supported languages
+
+The MyST parser supports generating documentation for various programming languages. Currently supported languages include:
+
+* Python
+* C++
+* Lua
+
+This approach allows you to integrate code documentation with your project's general documentation, reducing manual effort and ensuring consistency.
+
+## Installation
+
+To install the code generation support, you'll need to:
+
+1. Add the theme extras for the languages you want to support in your `pyproject.toml` file:
+
+    ```
+    [tool.poetry.extras]
+    sphinx-blue-robotics-theme = { version = "^0.0.1", extras = ["extras", "python", "cpp", "lua"] }
+    ```
+
+2. Install the package with the selected extras:
+
+    ```bash
+    poetry install
+    ```
+
+3. Add the specific configuration for the language you want to support in your `conf.py` file. Below you'll find examples for each programming language.
 
 ## Python docs generation
 
@@ -64,6 +91,16 @@ For more details, refer to the [sphinx-autodoc2 documentation](https://sphinx-au
 
 For C++, you can use tools like Doxygen, which generates XML output from your C++ code. This XML can then be processed by Sphinx with the `breathe` and `exhale` extensions to create formatted documentation.
 
+:::{important}
+If you're generating API docs with Doxygen, you'll need to have doxygen installed in your system.
+Also, remember to include the installation instructions in the GitHub Action worflow in the build process:
+
+```
+- name: Install Doxygen (optional)
+  run: sudo apt-get update && sudo apt-get install -y doxygen
+```
+:::
+
 With the following C++ code:
 
 ```cpp
@@ -83,7 +120,6 @@ And the following configuration in `conf.py`:
 import os
 import sys
 from datetime import date
-
 
 # Add the parent directory to the system path
 root_path = os.path.abspath(os.path.join("..", ".."))

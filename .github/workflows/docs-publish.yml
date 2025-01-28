@@ -48,26 +48,33 @@ jobs:
           fi
 
           # Set event_branch
+          event_branch=""
           if [[ "${{ github.event_name }}" == "push" ]]; then
-            echo "event_branch=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+            event_branch="${{ github.ref_name }}"
           elif [[ "${{ github.event_name }}" == "workflow_dispatch" ]] && [ -n "${{ github.event.inputs.branch }}" ]; then
-            echo "event_branch=${{ github.event.inputs.branch }}" >> $GITHUB_OUTPUT
-          else
-            echo "event_branch=" >> $GITHUB_OUTPUT
+            event_branch="${{ github.event.inputs.branch }}"
           fi
+          echo "event_branch=$event_branch" >> $GITHUB_OUTPUT
 
           # If event_branch is defined, check if it exists in versions.json
-          if [ -n "${{ steps.set-matrix.outputs.event_branch }}" ]; then
+          if [ -n "$event_branch" ]; then
             # Check if the branch exists in the versions.json
-            branch_exists=$(echo "$content" | jq -r --arg branch "${{ steps.set-matrix.outputs.event_branch }}" '.versions[] | select(.branch == $branch) | .branch')
+            branch_exists=$(echo "$content" | jq -r --arg branch "$event_branch" '.versions[] | select(.branch == $branch) | .branch')
             if [ -z "$branch_exists" ]; then
-              echo "error: Branch ${{ steps.set-matrix.outputs.event_branch }} not found in versions.json" >&2
+              echo "error: Branch $event_branch not found in versions.json" >&2
               exit 1
             fi
             # If branch exists, filter out only that version
-            filtered_versions=$(echo "$content" | jq --arg branch "${{ steps.set-matrix.outputs.event_branch }}" '.versions[] | select(.branch == $branch)')
-            echo "versions=[${filtered_versions}]" >> $GITHUB_OUTPUT
+            filtered_versions=$(echo "$content" | jq --arg branch "$event_branch" -c '[.versions[] | select(.branch == $branch)]')
+            echo "versions=$filtered_versions" >> $GITHUB_OUTPUT
           fi
+
+      - name: Debug set-matrix output
+        run: |
+          echo "Versions: ${{ steps.set-matrix.outputs.versions }}"
+          echo "Default Version: ${{ steps.set-matrix.outputs.default_version }}"
+          echo "Multiversion Enabled: ${{ steps.set-matrix.outputs.multiversion_enabled }}"
+          echo "Event Branch: ${{ steps.set-matrix.outputs.event_branch }}"
 
       - name: Save versions.json to artifact
         run: |
@@ -128,7 +135,7 @@ jobs:
       - name: Save build output to artifact
         run: |
           mkdir -p /tmp/build-output
-          cp -r docs/_build/${{ matrix.version.name }}/* /tmp/build-output/
+          cp -r docs/_build/${{ matrix.version.name }}/dirhtml/* /tmp/build-output/
 
       - name: Upload build output artifact
         uses: actions/upload-artifact@v4
@@ -138,7 +145,7 @@ jobs:
 
   # Deploy to gh-pages branch
   deploy:
-    needs: build
+    needs: [prepare, build]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout gh-pages branch
@@ -154,20 +161,22 @@ jobs:
       - name: Replace folder if only one version was built
         if: ${{ needs.prepare.outputs.event_branch != '' }}
         run: |
-          version_name=$(echo "${{ fromJson(needs.prepare.outputs.versions) }}" | jq -r '.[0].name')
+          version_name=$(echo '${{ needs.prepare.outputs.versions }}' | jq -r '.[0].name')
           rm -rf $version_name
+          mkdir -p $version_name
           cp -r /tmp/build-output/build-output-$version_name/* $version_name/
 
       - name: Clear all and replace folders if multiple versions were built
         if: ${{ needs.prepare.outputs.event_branch == '' }}
         run: |
-          versions_json="${{ fromJson(needs.prepare.outputs.versions) }}"
+          versions_json='${{ needs.prepare.outputs.versions }}'
           rm -rf *
           for version in $(echo "$versions_json" | jq -c '.[]'); do
             version_name=$(echo "$version" | jq -r '.name')
+            mkdir -p $version_name
             cp -r /tmp/build-output/build-output-$version_name/* $version_name/
           done
-
+      
       - name: Create redirect to default version
         env:
           DEFAULT_VERSION: ${{ needs.prepare.outputs.default_version }}

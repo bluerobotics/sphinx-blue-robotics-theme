@@ -9,6 +9,7 @@ REPO_URL = "https://github.com/bluerobotics/sphinx-blue-robotics-theme"
 REPO_NAME = "sphinx-blue-robotics-theme"
 PROJECT_NAME ="Blue Robotics Sphinx Theme"
 MULTIVERSION_ENABLED = os.getenv('MULTIVERSION_ENABLED', 'false').lower() == 'true'
+MULTIVERSION_CURRENT_NAME = os.getenv('MULTIVERSION_CURRENT_NAME', 'master')
 
 # Add the parent directory to the system path
 root_path = os.path.abspath(os.path.join("..", ".."))
@@ -38,6 +39,7 @@ extensions = [
     "sphinx_blue_robotics_theme.extensions.cpp",
     "sphinx_blue_robotics_theme.extensions.lua",
 ]
+master_doc = "index"
 
 source_suffix = {'.rst': 'restructuredtext', '.md': 'restructuredtext'}
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
@@ -60,7 +62,7 @@ html_theme = "sphinx_blue_robotics_theme"
 html_theme_path = ["../.."]
 html_static_path= ["_static"]
 html_theme_options = {
-    "site_url": SITE_URL,
+    "site_url": SITE_URL + MULTIVERSION_CURRENT_NAME  + "/" if MULTIVERSION_ENABLED else SITE_URL,
     "repo_url": REPO_URL,
     "repo_name": REPO_NAME,
     "icon": {

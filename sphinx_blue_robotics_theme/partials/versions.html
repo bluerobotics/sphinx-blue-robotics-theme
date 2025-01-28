@@ -14,10 +14,14 @@
 
 <script>
   function switchVersion(version) {
+    const themeSiteUrl = "{{ project_url }}";
+    console.log(themeSiteUrl);
     const currentPath = window.location.pathname;
-    const pathSegments = currentPath.split('/');
-    pathSegments[1] = version;
-    const newPath = pathSegments.join('/');    
+    console.log(currentPath);
+    const relativePath = currentPath.replace(new URL(themeSiteUrl).pathname, '');
+    const pathSegments = relativePath.split('/');
+    pathSegments[0] = version;
+    const newPath = new URL(pathSegments.join('/'), themeSiteUrl).href;
     window.location.href = newPath;
   }
 </script>

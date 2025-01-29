@@ -106,11 +106,52 @@ To publish a new version of the documentation, follow these steps:
 
 3. Once the workflow completes successfully, the new version will be deployed. If the workflow fails, review the logs to identify and resolve any issues.
 
+### Set the default version
+
+In the `docs/versions.json` file, you can specify the default version. This version will be used to redirect the root of the domain to the selected version. Only one version can be set as the default at a time.
+
+To set the default version, update the versions.json file by setting the `is_default` field to `true` for the version you want to designate as the default:
+
+```json
+{
+  "name": "v3.0",
+  "branch": "v3.0",
+  "is_default": true
+}
+```
+
+After making this change, push your updates and republish the version.
+
 ### Republish an existing version
 
 To update an existing version, [trigger the workflow manually](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow) setting the branch name you want to rebuild.
 
 This is useful when content in the versioned branch has changed and you want to reflect those updates in the documentation.
+
+
+### Hide the default branch
+
+By default, the default repository branch is always built and published. This allows you to view the latest version of the documentation before publishing.
+
+If you want to hide the default branch from the version selector, add the default branch name to the `hide_versions` theme options in  your `docs/conf.py`:
+
+```
+html_theme_options = {
+    "hide_versions": ['master'],
+}
+```
+
+This will prevent the default branch from appearing in the version selector, while still allowing it to be built and published.
+
+
+If you want to completely remove the default branch from the workflow and prevent it from being built or published, exclude it from the `docs/versions.json` file and remove the following section that pushes the master branch to GitHub Pages:
+
+```
+on:
+  push:
+    branches:
+    - master
+```
 
 ## Reference
 
@@ -156,3 +197,4 @@ In this example:
 - `name`: The version name. This will be used to define the URL structure for the documentation.
 - `branch`: Corresponds to the branch in your repository that the version will be built from.
 - `is_default`: This field indicates the default version to which users will be redirected when they visit the documentation site without specifying a version. Ensure that only one version is marked as the default.
+

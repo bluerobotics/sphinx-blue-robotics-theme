@@ -15,7 +15,6 @@ Before getting started, make sure you have the following tools installed:
 
 To get started with editing and previewing the documentation for a BlueRobotics project, follow these steps:
 
-
 1. Clone the BlueRobotics repository that contains the `docs` folder you want to contribute to:
 
    ```bash
@@ -42,7 +41,6 @@ You can edit documentation in either Markdown (`.md`) or reStructuredText (`.rst
 
    - For **Markdown** files, refer to the [MyST Parser guide](https://myst-parser.readthedocs.io/en/latest/).
    - For **reStructuredText** (RST) files, check out the [Sphinx reStructuredText basics](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) for syntax and examples.
-
 
 For day-to-day examples on how to work with components, refer to [Examples](examples/index.md).
 

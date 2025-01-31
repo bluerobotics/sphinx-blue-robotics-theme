@@ -21,9 +21,9 @@ To configure deployment support in your project, follow these steps:
       - master
   ```
 
-3. Review `docs/versions.yml` to ensure there is one version with `is_default` set to `true`.
+3. Review `docs/versions.json` to ensure there is one version with `is_default` set to `true`.
 
-4. Review `docs/conf.py` to define the URL of your project:
+4. Review `docs/sources/conf.py` to define the URL of your project:
 
   ```
   SITE_URL = "https://bluerobotics.github.io/sphinx-blue-robotics-theme/"

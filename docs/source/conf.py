@@ -47,11 +47,6 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # Syntax highlighting
 pygments_style = "sphinx"
 
-# Substitutions
-myst_substitutions = {
-  "project_name": "Blue Robotics"
-}
-
 # External links
 extlinks = {
     'issue': (REPO_URL + '/issues/%s', 'issue %s')
@@ -119,6 +114,10 @@ if MULTIVERSION_ENABLED:
 
 # Myst Parser options
 myst_enable_extensions = ["substitution", "colon_fence"]
+myst_heading_anchors = 3
+myst_substitutions = {
+  "project_name": "Blue Robotics"
+}
 
 # Autodoc configuration (Python documentation)
 autodoc2_packages = [

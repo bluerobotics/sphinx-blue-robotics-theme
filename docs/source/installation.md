@@ -16,7 +16,7 @@ To install Sphinx and this theme in a BlueRobotics project, follow these steps:
 
 1. Copy the `docs` and `.github` folders [from this repository](https://github.com/bluerobotics/docs-boilerplate) into your own project.
 
-2. Edit your `conf.py` global variables with your project details:
+2. In `doc/sources/conf.py`, edit the global variables with your project details:
 
    ```python
    SITE_URL = "https://docs.bluerobotics.com/sphinx-theme/"
@@ -25,9 +25,37 @@ To install Sphinx and this theme in a BlueRobotics project, follow these steps:
    PROJECT_NAME ="Blue Robotics Sphinx Theme"
    ```
 
-3. Edit your documentation as needed.
 
-4. To view the documentation locally, run the following command:
+3. In `doc/versions.json`, define the documentation versions you want to support:
+
+
+   ```json
+   {
+      "versions": [
+            {
+               "name": "latest",
+               "branch": "master",
+               "is_default": true
+            }
+         ]
+   } 
+   ```
+
+   For more details, see [Versions file](deployment.md#versions-file).
+
+4. In `.github/workflows/docs-publish.yml`, make sure your default branch (e.g. `main` or `master`) is listed in `on.push.branches` key:
+
+   ```yaml
+   on:
+      push:
+         branches:
+            - master
+   ```
+
+
+5. Push your changes.
+
+6. Edit your documentation as needed. To view the documentation locally, run the following command:
 
    ```bash
    make preview

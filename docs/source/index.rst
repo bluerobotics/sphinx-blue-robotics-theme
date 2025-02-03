@@ -34,4 +34,5 @@ Coming soon.
   quickstart
   customization
   commands
+  deployment
   examples/index

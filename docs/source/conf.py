@@ -4,11 +4,12 @@ import sys
 from datetime import date
 
 # Global variables
-
 SITE_URL = "https://bluerobotics.github.io/sphinx-blue-robotics-theme/"
 REPO_URL = "https://github.com/bluerobotics/sphinx-blue-robotics-theme"
 REPO_NAME = "sphinx-blue-robotics-theme"
 PROJECT_NAME ="Blue Robotics Sphinx Theme"
+MULTIVERSION_ENABLED = os.getenv('MULTIVERSION_ENABLED', 'false').lower() == 'true'
+MULTIVERSION_CURRENT_NAME = os.getenv('MULTIVERSION_CURRENT_NAME', 'master')
 
 # Add the parent directory to the system path
 root_path = os.path.abspath(os.path.join("..", ".."))
@@ -32,22 +33,19 @@ extensions = [
     "sphinx.ext.viewcode",
     "myst_parser",
     "sphinx_blue_robotics_theme",
+    "sphinx_blue_robotics_theme.extensions.multiversion",
     "sphinx_blue_robotics_theme.extensions.extras",
     "sphinx_blue_robotics_theme.extensions.python",
     "sphinx_blue_robotics_theme.extensions.cpp",
     "sphinx_blue_robotics_theme.extensions.lua",
 ]
 master_doc = "index"
+
 source_suffix = {'.rst': 'restructuredtext', '.md': 'restructuredtext'}
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # Syntax highlighting
 pygments_style = "sphinx"
-
-# Substitutions
-myst_substitutions = {
-  "project_name": "Blue Robotics"
-}
 
 # External links
 extlinks = {
@@ -59,7 +57,7 @@ html_theme = "sphinx_blue_robotics_theme"
 html_theme_path = ["../.."]
 html_static_path= ["_static"]
 html_theme_options = {
-    "site_url": SITE_URL,
+    "site_url": SITE_URL + MULTIVERSION_CURRENT_NAME  + "/" if MULTIVERSION_ENABLED else SITE_URL,
     "repo_url": REPO_URL,
     "repo_name": REPO_NAME,
     "icon": {
@@ -68,7 +66,7 @@ html_theme_options = {
     },
     "globaltoc_collapse": False,
     "edit_uri": "blob/master/docs/source",
-        "features": [
+    "features": [
         "navigation.sections",
         "navigation.megamenu",
         "navigation.top",
@@ -96,6 +94,8 @@ html_theme_options = {
         },
     ],
     "toc_title_is_page_title": True,
+    "hide_versions": not MULTIVERSION_ENABLED,
+    "exclude_versions": []
 }
 
 html_last_updated_fmt = "%d %b %Y"
@@ -104,11 +104,20 @@ html_baseurl = SITE_URL
 html_context = {
     "homepage_url": "https://bluerobotics.com",
     "project_url": html_baseurl, 
-    "project": project, 
+    "project": project,
     "exclude_comments": True}
+
+# Multiversion configuration
+if MULTIVERSION_ENABLED:
+    extensions.append('sphinx_blue_robotics_theme.extensions.multiversion')
+    versions_local_path = '../versions.json'
 
 # Myst Parser options
 myst_enable_extensions = ["substitution", "colon_fence"]
+myst_heading_anchors = 3
+myst_substitutions = {
+  "project_name": "Blue Robotics"
+}
 
 # Autodoc configuration (Python documentation)
 autodoc2_packages = [

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sphinx-blue-robotics-theme"
-version = "0.0.1"
+version = "0.0.2"
 description = "Sphinx theme for BlueRobotics documentation projects"
 authors = ["TechDocs Studio <info@techdocs.studio>"]
 exclude = [".github", "docs"]

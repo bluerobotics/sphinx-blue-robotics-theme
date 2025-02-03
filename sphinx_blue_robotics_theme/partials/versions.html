@@ -1,0 +1,28 @@
+{%- if versions %}
+<div class="version-switcher">
+  <select onchange="switchVersion(this.value)">
+    {%- for version in versions %}
+      {%- if version.name not in theme_exclude_versions %}
+      <option value="{{ version.name }}"
+              {% if version.name == current_version_name %}selected="selected"{% endif %}>
+        {{ version.name }}
+      </option>
+      {%- endif %}
+    {%- endfor %}
+  </select>
+</div>
+
+<script>
+  function switchVersion(version) {
+    const themeSiteUrl = "{{ project_url }}";
+    console.log(themeSiteUrl);
+    const currentPath = window.location.pathname;
+    console.log(currentPath);
+    const relativePath = currentPath.replace(new URL(themeSiteUrl).pathname, '');
+    const pathSegments = relativePath.split('/');
+    pathSegments[0] = version;
+    const newPath = new URL(pathSegments.join('/'), themeSiteUrl).href;
+    window.location.href = newPath;
+  }
+</script>
+{% endif %} 

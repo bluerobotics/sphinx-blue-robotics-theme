@@ -38,6 +38,7 @@ extensions = [
     "sphinx_blue_robotics_theme.extensions.python",
     "sphinx_blue_robotics_theme.extensions.cpp",
     "sphinx_blue_robotics_theme.extensions.lua",
+    "sphinx_blue_robotics_theme.extensions.hero",
 ]
 master_doc = "index"
 

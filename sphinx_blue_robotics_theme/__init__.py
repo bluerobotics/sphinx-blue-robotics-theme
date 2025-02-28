@@ -1,100 +1,26 @@
 from os import path
+import json
 
 import sphinx_immaterial
 from sphinx_blue_robotics_theme._version import version
 
-def _build_right_drawer():
-    return [
-        {
-            "title": "Docs",
-            "url": "https://docs.bluerobotics.com",
-            "children": [],
-            "active": False,
-            "current": False,
-        },
-        {
-            "title": "Projects",
-            "url": "#",
-            "children": [
-                {
-                    "title": "BlueOS",
-                    "url": "#",
-                    "children": [
-                        {"title": "BlueOS docs", "url": "https://blueos.cloud/docs/", "children": []},
-                        {"title": "Cockpit docs", "url": "https://blueos.cloud/cockpit/docs/", "children": []},
-                        {"title": "BlueOS Community (GitHub)", "url": "https://github.com/orgs/BlueOS-community/repositories", "children": []},
-                        {"title": "About BlueOS", "url": "hhttps://blueos.cloud/", "children": []},
-                    ],
-                },
-                {
-                    "title": "Navigator",
-                    "url": "#",
-                    "children": [
-                        {"title": "Navigator Libraries (Python)", "url": "#", "children": []},
-                        {"title": "Navigator Libraries (C++)", "url": "#", "children": []},
-                        {"title": "Navigator Libraries (Rust)", "url": "#", "children": []},
-                        {"title": "See Navigator Product", "url": "https://bluerobotics.com/store/comm-control-power/control/navigator/", "children": []},
-                    ],
-                },
-                {
-                    "title": "Ping Sonars and Ping Protocol",
-                    "url": "#",
-                    "children": [
-                        {"title": "Ping Viewer", "url": "#", "children": []},
-                        {"title": "Ping Protocol", "url": "#", "children": []},
-                        {"title": "ping-rs", "url": "#", "children": []},
-                        {"title": "ping-cpp", "url": "#", "children": []},
-                        {"title": "ping-arduino", "url": "#", "children": []},
-                        {"title": "ping-python", "url": "#", "children": []},
-                        {"title": "See Ping Sonar Products", "url": "https://bluerobotics.com/product-category/sonars/", "children": []},
-                    ],
-                },
-                {
-                    "title": "Sensors",
-                    "url": "#",
-                    "children": [
-                        {"title": "ms5837-python", "url": "#", "children": []},
-                        {"title": "BlueRobotics_MS5837_Library (Arduino)", "url": "#", "children": []},
-                        {"title": "KellerLD-python", "url": "#", "children": []},
-                        {"title": "BlueRobotics_KellerLD_Library (Arduino)", "url": "#", "children": []},
-                        {"title": "tsys01-python", "url": "#", "children": []},
-                        {"title": "BlueRobotics_TSYS01_Library (Arduino)", "url": "#", "children": []},
-                        {"title": "See Sensor Products", "url": "https://bluerobotics.com/product-category/sensors-cameras/sensors/", "children": []},
-                    ],
-                },
-            ],
-        },
-        {
-            "title": "Community",
-            "url": "#",
-            "children": [
-                {
-                    "title": "Blue Robotics",
-                    "url": "#",
-                    "children": [
-                        {"title": "About Blue Robotics", "url": "https://bluerobotics.com/about/", "children": []},
-                        {"title": "Visit the Store", "url": "https://bluerobotics.com/store/", "children": []},
-                        {"title": "Blue Robotics Guides", "url": "https://bluerobotics.com/learn/", "children": []},
-                        {"title": "Blue Robotics Github", "url": "https://github.com/bluerobotics", "children": []},
-                    ],
-                },
-                {
-                    "title": "Support",
-                    "url": "#",
-                    "children": [
-                        {"title": "Blue Robotics Forum", "url": "https://discuss.bluerobotics.com/", "children": []},
-                        {"title": "Blue Robotics Support", "url": "https://bluerobotics.com/help/?want=report", "children": []},
-                    ],
-                },
-            ],
-        },
-    ]
+def _build_right_drawer(app):
+    """Load right drawer configuration from JSON file"""
+    try:
+        drawer_path = path.join(path.dirname(__file__), 'drawer.json')
+        with open(drawer_path, 'r') as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        app.warning(f"Could not load drawer configuration: {e}")
+        return []
 
 def update_context(app, pagename, templatename, context, doctree):
     file_meta = context.get("meta", None) or {}
     context["blue_robotics_theme_version"] = version
-    context["right_drawer"] = _build_right_drawer()
+    context["right_drawer"] = _build_right_drawer(app)
     context["favicon_url"] = app.config.html_static_path[0] + "/favicon.ico"
+    file_meta = context.get("meta", None) or {}
+    context["hide_date"] = "hide-date" in file_meta
 
 
 def setup(app):

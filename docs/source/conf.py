@@ -5,7 +5,7 @@ from datetime import date
 
 # Global variables
 
-SITE_URL = "https://bluerobotics.github.io/sphinx-blue-robotics-theme/"
+SITE_URL = "https://docs.bluerobotics.com/sphinx-blue-robotics-theme/"
 REPO_URL = "https://github.com/bluerobotics/sphinx-blue-robotics-theme"
 REPO_NAME = "sphinx-blue-robotics-theme"
 PROJECT_NAME ="Blue Robotics Sphinx Theme"
@@ -36,6 +36,7 @@ extensions = [
     "sphinx_blue_robotics_theme.extensions.python",
     "sphinx_blue_robotics_theme.extensions.cpp",
     "sphinx_blue_robotics_theme.extensions.lua",
+    "sphinx_blue_robotics_theme.extensions.hero",
 ]
 master_doc = "index"
 source_suffix = {'.rst': 'restructuredtext', '.md': 'restructuredtext'}

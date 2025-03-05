@@ -1,0 +1,17 @@
+.. _exhale_class_classMyClass:
+
+Class MyClass
+=============
+
+- Defined in :ref:`file__home_runner_work_sphinx-blue-robotics-theme_sphinx-blue-robotics-theme_src_cpp_my_class.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: MyClass
+   :project: myproject
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,16 @@
+
+.. _program_listing_file__home_runner_work_sphinx-blue-robotics-theme_sphinx-blue-robotics-theme_src_cpp_my_class.h:
+
+Program Listing for File my_class.h
+===================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_sphinx-blue-robotics-theme_sphinx-blue-robotics-theme_src_cpp_my_class.h>` (``/home/runner/work/sphinx-blue-robotics-theme/sphinx-blue-robotics-theme/src/cpp/my_class.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   class MyClass {
+   public:
+       void myMethod();
+   };

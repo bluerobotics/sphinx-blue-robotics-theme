@@ -1,0 +1,39 @@
+:py:mod:`python`
+================
+
+.. py:module:: python
+
+.. autodoc2-docstring:: python
+   :allowtitles:
+
+Submodules
+----------
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   python.mymodule
+
+Package Contents
+----------------
+
+Data
+~~~~
+
+.. list-table::
+   :class: autosummary longtable
+   :align: left
+
+   * - :py:obj:`__version__ <python.__version__>`
+     - .. autodoc2-docstring:: python.__version__
+          :summary:
+
+API
+~~~
+
+.. py:data:: __version__
+   :canonical: python.__version__
+   :value: '0.1.0'
+
+   .. autodoc2-docstring:: python.__version__

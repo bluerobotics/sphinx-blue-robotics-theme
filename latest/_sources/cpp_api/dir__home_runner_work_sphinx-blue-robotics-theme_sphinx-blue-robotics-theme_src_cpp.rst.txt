@@ -1,0 +1,21 @@
+.. _dir__home_runner_work_sphinx-blue-robotics-theme_sphinx-blue-robotics-theme_src_cpp:
+
+
+Directory cpp
+=============
+
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_sphinx-blue-robotics-theme_sphinx-blue-robotics-theme_src>` (``/home/runner/work/sphinx-blue-robotics-theme/sphinx-blue-robotics-theme/src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+*Directory path:* ``/home/runner/work/sphinx-blue-robotics-theme/sphinx-blue-robotics-theme/src/cpp``
+
+
+Files
+-----
+
+- :ref:`file__home_runner_work_sphinx-blue-robotics-theme_sphinx-blue-robotics-theme_src_cpp_my_class.h`
+
+

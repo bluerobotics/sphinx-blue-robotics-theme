@@ -1,0 +1,2516 @@
+
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+
+    <!-- Meta tags -->
+    
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+      <!-- Page description -->
+      
+
+      <!-- Page author -->
+      
+
+      <!-- Canonical -->
+      
+
+      <!-- Favicon -->
+      <link rel="icon" href="_static/favicon.ico" />
+    
+
+    <!-- Site title -->
+    
+      
+        <title>Code blocks - Blue Robotics Sphinx Theme  documentation</title>
+      
+    
+
+    <!-- Theme-related style sheets -->
+    
+
+      <!-- Extra color palette -->
+      
+        
+
+        <!-- Theme-color meta tag for Android -->
+        
+      
+
+      <!-- Custom icons -->
+      
+
+    
+
+    <!-- JavaScript libraries -->
+    
+
+    <!-- Webfonts -->
+    
+
+      <!-- Load fonts from Google -->
+      
+        
+        
+        <style>
+          :root {
+            --md-text-font: "Roboto";
+            --md-code-font: "Roboto Mono";
+          }
+        </style>
+      
+    
+
+    <!-- Custom stylesheets -->
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.b83f2e057cd610c26.min.css?v=71bc7cdb" />
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+        <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+        <link rel="stylesheet" type="text/css" href="../../_static/css/main.css?v=a2e3b4dc" />
+
+    <!-- Helper functions for inline scripts -->
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+    <!-- Analytics -->
+    
+      
+
+    
+
+    <!-- Meta tags from front matter or plugins -->
+    
+
+    <!-- Custom front matter -->
+    
+  </head>
+
+  <!-- Set text direction and color palette, if defined -->
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body
+      dir="ltr"
+      data-md-color-scheme="default"
+      data-md-color-primary=""
+      data-md-color-accent=""
+    >
+  
+    
+
+    <!-- User preference: color palette -->
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+
+    <!--
+      State toggles - we need to set autocomplete="off" in order to reset the
+      drawer on back button invocation in some browsers
+    -->
+    <input
+      class="md-toggle"
+      data-md-toggle="drawer"
+      type="checkbox"
+      id="__drawer"
+      autocomplete="off"
+    />
+    <input
+      class="md-toggle"
+      data-md-toggle="search"
+      type="checkbox"
+      id="__search"
+      autocomplete="off"
+    />
+
+    <!-- Overlay for expanded drawer -->
+    <label class="md-overlay" for="__drawer"></label>
+
+    <!-- Skip to content -->
+    <div data-md-component="skip">
+      
+        
+        <a href="#syntax" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+
+    <!-- Announcement bar -->
+    <div data-md-component="announce">
+      
+    </div>
+
+    <!-- Version warning -->
+    
+
+    <!-- Header -->
+    
+      
+
+<!-- Determine class according to configuration -->
+
+
+
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+
+    <!-- Link to home -->
+    <a href="https://bluerobotics.com" title="Blue Robotics Sphinx Theme  documentation"
+      class="md-header__button md-logo" aria-label="Blue Robotics Sphinx Theme  documentation" data-md-component="logo">
+      
+<!-- Logo -->
+<img src="../../_static/img/logo-dark.png" alt="logo" class="show-slate" />
+<img src="../../_static/img/logo.png" alt="logo" class="show-default" />
+    </a>
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+
+    <!-- Icon -->
+    <a href="https://bluerobotics.com" title="Blue Robotics Sphinx Theme  documentation"
+      class="mobile-logo" aria-label="Blue Robotics Sphinx Theme  documentation">
+      
+<!-- Logo -->
+<img src="../../_static/img/logo-dark.png" alt="logo" class="show-slate" />
+<img src="../../_static/img/logo.png" alt="logo" class="show-default" />
+    </a>
+
+    <!-- Button to open search modal -->
+    
+    <label class="md-header__button md-icon" for="__search">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+    </label>
+
+   <div class="md-header__title" data-md-component="header-title">
+    <div class="md-header__ellipsis">
+      <div class="md-header__topic" data-md-component="header-topic"></div>
+    </div>
+  </div>
+
+    <!-- Search interface -->
+    <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    <!-- Custom mega menu  -->
+    
+    <div class="md_header__mega-menu">
+      <!-- Mobile icon -->
+      <label for="__drawer-right" class="mega-menu-item show-on-mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-layout-grid">
+          <rect width="7" height="7" x="3" y="3" rx="1" />
+          <rect width="7" height="7" x="14" y="3" rx="1" />
+          <rect width="7" height="7" x="14" y="14" rx="1" />
+          <rect width="7" height="7" x="3" y="14" rx="1" />
+        </svg>
+      </label>
+
+      <!-- Mega Menu desktop -->
+      <div class="md_header__mega-menu hide-on-mobile">
+        
+<nav class="mega-menu mega-menu-docs">
+  <ul>
+    <li class="mega-menu-item mega-menu-item_l1">
+      <a class="mega-menu-title" href="https://docs.bluerobotics.com" 
+         >
+        Docs<span class="mega-indicator"></span>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+
+<nav class="mega-menu mega-menu-projects">
+  <ul>
+    <li class="mega-menu-item mega-menu-item_l1">
+      <a class="mega-menu-title" href="#" 
+          tabindex="0" aria-haspopup="true" aria-expanded="false" role="button" >
+        Projects<span class="mega-indicator"></span>
+      </a>
+      
+      <ul class="mega-sub-menu">
+        
+        <li class="mega-menu-item mega-menu-item_l2">
+          <a class="mega-menu-header" href="#">
+            BlueOS
+          </a>
+          
+          <ul class="mega-sub-menu">
+            
+            <li>
+              <a class="mega-menu-link" href="https://blueos.cloud/docs/">
+                BlueOS docs
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="https://blueos.cloud/cockpit/docs/">
+                Cockpit docs
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="https://github.com/orgs/BlueOS-community/repositories">
+                BlueOS Community (GitHub)
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="hhttps://blueos.cloud/">
+                About BlueOS
+              </a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li class="mega-menu-item mega-menu-item_l2">
+          <a class="mega-menu-header" href="#">
+            Navigator
+          </a>
+          
+          <ul class="mega-sub-menu">
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                Navigator Libraries (Python)
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                Navigator Libraries (C++)
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                Navigator Libraries (Rust)
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="https://bluerobotics.com/store/comm-control-power/control/navigator/">
+                See Navigator Product
+              </a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li class="mega-menu-item mega-menu-item_l2">
+          <a class="mega-menu-header" href="#">
+            Ping Sonars and Ping Protocol
+          </a>
+          
+          <ul class="mega-sub-menu">
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                Ping Viewer
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                Ping Protocol
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                ping-rs
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                ping-cpp
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                ping-arduino
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                ping-python
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="https://bluerobotics.com/product-category/sonars/">
+                See Ping Sonar Products
+              </a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li class="mega-menu-item mega-menu-item_l2">
+          <a class="mega-menu-header" href="#">
+            Sensors
+          </a>
+          
+          <ul class="mega-sub-menu">
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                ms5837-python
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                BlueRobotics_MS5837_Library (Arduino)
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                KellerLD-python
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                BlueRobotics_KellerLD_Library (Arduino)
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                tsys01-python
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="#">
+                BlueRobotics_TSYS01_Library (Arduino)
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="https://bluerobotics.com/product-category/sensors-cameras/sensors/">
+                See Sensor Products
+              </a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+      
+    </li>
+  </ul>
+</nav>
+
+<nav class="mega-menu mega-menu-community">
+  <ul>
+    <li class="mega-menu-item mega-menu-item_l1">
+      <a class="mega-menu-title" href="#" 
+          tabindex="0" aria-haspopup="true" aria-expanded="false" role="button" >
+        Community<span class="mega-indicator"></span>
+      </a>
+      
+      <ul class="mega-sub-menu">
+        
+        <li class="mega-menu-item mega-menu-item_l2">
+          <a class="mega-menu-header" href="#">
+            Blue Robotics
+          </a>
+          
+          <ul class="mega-sub-menu">
+            
+            <li>
+              <a class="mega-menu-link" href="https://bluerobotics.com/about/">
+                About Blue Robotics
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="https://bluerobotics.com/store/">
+                Visit the Store
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="https://bluerobotics.com/learn/">
+                Blue Robotics Guides
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="https://github.com/bluerobotics">
+                Blue Robotics Github
+              </a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li class="mega-menu-item mega-menu-item_l2">
+          <a class="mega-menu-header" href="#">
+            Support
+          </a>
+          
+          <ul class="mega-sub-menu">
+            
+            <li>
+              <a class="mega-menu-link" href="https://discuss.bluerobotics.com/">
+                Blue Robotics Forum
+              </a>
+            </li>
+            
+            <li>
+              <a class="mega-menu-link" href="https://bluerobotics.com/help/?want=report">
+                Blue Robotics Support
+              </a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+      
+    </li>
+  </ul>
+</nav>
+
+      </div>
+    </div>
+
+    <!-- Right Drawer Toggle -->
+    <input type="checkbox" id="__drawer-right" class="md-drawer-toggle" hidden />
+
+    <!-- Right Drawer Overlay -->
+    <label for="__drawer-right" class="md-overlay-right-drawer"></label>
+
+    <!-- Right Drawer -->
+    <nav class="md-drawer md-drawer-right show-on-mobile">
+      <div class="md-drawer__megamenu">
+        
+
+<!-- Determine class according to configuration -->
+
+
+
+
+<!-- Main navigation -->
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <!-- Render item list -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+    
+    
+    
+    
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.bluerobotics.com" class="md-nav__link">
+        Docs
+      </a>
+    </li>
+  
+
+    
+    
+    
+    
+    
+    
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__rightdrawer_2" type="checkbox" id="__rightdrawer_2" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="#">Projects</a>
+          
+            <label for="__rightdrawer_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="" data-md-level="1">
+        <label class="md-nav__title" for="__rightdrawer_2">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__rightdrawer_2_1" type="checkbox" id="__rightdrawer_2_1" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="#">BlueOS</a>
+          
+            <label for="__rightdrawer_2_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="" data-md-level="2">
+        <label class="md-nav__title" for="__rightdrawer_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          BlueOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://blueos.cloud/docs/" class="md-nav__link">
+        BlueOS docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://blueos.cloud/cockpit/docs/" class="md-nav__link">
+        Cockpit docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/orgs/BlueOS-community/repositories" class="md-nav__link">
+        BlueOS Community (GitHub)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hhttps://blueos.cloud/" class="md-nav__link">
+        About BlueOS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__rightdrawer_2_2" type="checkbox" id="__rightdrawer_2_2" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="#">Navigator</a>
+          
+            <label for="__rightdrawer_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="" data-md-level="2">
+        <label class="md-nav__title" for="__rightdrawer_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Navigator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        Navigator Libraries (Python)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        Navigator Libraries (C++)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        Navigator Libraries (Rust)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bluerobotics.com/store/comm-control-power/control/navigator/" class="md-nav__link">
+        See Navigator Product
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__rightdrawer_2_3" type="checkbox" id="__rightdrawer_2_3" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="#">Ping Sonars and Ping Protocol</a>
+          
+            <label for="__rightdrawer_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="" data-md-level="2">
+        <label class="md-nav__title" for="__rightdrawer_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Ping Sonars and Ping Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        Ping Viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        Ping Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        ping-rs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        ping-cpp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        ping-arduino
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        ping-python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bluerobotics.com/product-category/sonars/" class="md-nav__link">
+        See Ping Sonar Products
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__rightdrawer_2_4" type="checkbox" id="__rightdrawer_2_4" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="#">Sensors</a>
+          
+            <label for="__rightdrawer_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="" data-md-level="2">
+        <label class="md-nav__title" for="__rightdrawer_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Sensors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        ms5837-python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        BlueRobotics_MS5837_Library (Arduino)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        KellerLD-python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        BlueRobotics_KellerLD_Library (Arduino)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        tsys01-python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        BlueRobotics_TSYS01_Library (Arduino)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bluerobotics.com/product-category/sensors-cameras/sensors/" class="md-nav__link">
+        See Sensor Products
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+    
+    
+    
+    
+    
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__rightdrawer_3" type="checkbox" id="__rightdrawer_3" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="#">Community</a>
+          
+            <label for="__rightdrawer_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="" data-md-level="1">
+        <label class="md-nav__title" for="__rightdrawer_3">
+          <span class="md-nav__icon md-icon"></span>
+          Community
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__rightdrawer_3_1" type="checkbox" id="__rightdrawer_3_1" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="#">Blue Robotics</a>
+          
+            <label for="__rightdrawer_3_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="" data-md-level="2">
+        <label class="md-nav__title" for="__rightdrawer_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Blue Robotics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bluerobotics.com/about/" class="md-nav__link">
+        About Blue Robotics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bluerobotics.com/store/" class="md-nav__link">
+        Visit the Store
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bluerobotics.com/learn/" class="md-nav__link">
+        Blue Robotics Guides
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/bluerobotics" class="md-nav__link">
+        Blue Robotics Github
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__rightdrawer_3_2" type="checkbox" id="__rightdrawer_3_2" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="#">Support</a>
+          
+            <label for="__rightdrawer_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="" data-md-level="2">
+        <label class="md-nav__title" for="__rightdrawer_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discuss.bluerobotics.com/" class="md-nav__link">
+        Blue Robotics Forum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bluerobotics.com/help/?want=report" class="md-nav__link">
+        Blue Robotics Support
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+    
+  </ul>
+</nav>
+      </div>
+    </nav>
+    
+
+    <!-- Color palette -->
+    
+    <form class="md-header__option" data-md-component="palette">
+      
+      
+      
+      <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default"
+        data-md-color-primary="" data-md-color-accent="" 
+        aria-label="Switch to dark mode"  type="radio" name="__palette"
+        id="__palette_1" />
+      
+      <label class="md-header__button md-icon" title="Switch to dark mode"
+        for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M9.598 1.591a.75.75 0 0 1 .785-.175 7 7 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.5 5.5 0 1 0 7.678-7.678z"/></svg>
+      </label>
+      
+      
+      
+      
+      <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate"
+        data-md-color-primary="" data-md-color-accent="" 
+        aria-label="Switch to light mode"  type="radio" name="__palette"
+        id="__palette_2" />
+      
+      <label class="md-header__button md-icon" title="Switch to light mode"
+        for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13zM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.75.75 0 0 1-1.06 1.06l-1.06-1.06a.75.75 0 0 1 0-1.06zm9.193 9.193a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061zM16 8a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8zM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8zm10.657-5.657a.75.75 0 0 1 0 1.061l-1.061 1.06a.75.75 0 1 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0z"/></svg>
+      </label>
+      
+      
+    </form>
+    
+
+    <!-- Site language selector -->
+    
+
+    <!-- Repository information -->
+    
+    <div class="md-header__source">
+      <a href="https://github.com/bluerobotics/sphinx-blue-robotics-theme" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sphinx-blue-robotics-theme
+  </div>
+</a>
+    </div>
+    
+
+
+    <!-- Navigation tabs (sticky) -->
+    
+
+</header>
+    
+
+    <!-- Container -->
+    <div class="md-container" data-md-component="container">
+
+      <!-- Hero teaser -->
+      
+      
+      
+
+      <!-- Navigation tabs (collapsing) -->
+      
+        
+          
+        
+      
+
+      <!-- Main area -->
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+
+          <!-- Sidebars -->
+          
+
+            <!-- Navigation -->
+            
+              
+              <div
+                class="md-sidebar md-sidebar--primary"
+                data-md-component="sidebar"
+                data-md-type="navigation"
+                
+              >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<!-- Determine class according to configuration -->
+
+
+
+
+<!-- Main navigation -->
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+  <!-- Site title -->
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://bluerobotics.github.io/sphinx-blue-robotics-theme/">
+      Blue Robotics Sphinx Theme
+    </a>
+  </label>
+
+  <!-- Repository information -->
+  
+  <div class="md-nav__source">
+    <a href="https://github.com/bluerobotics/sphinx-blue-robotics-theme" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sphinx-blue-robotics-theme
+  </div>
+</a>
+  </div>
+  
+
+  <!-- Render item list -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+    
+    
+    
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        <span class="md-ellipsis">Installation</span>
+      </a>
+    </li>
+  
+
+    
+    
+    
+    
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        <span class="md-ellipsis">Quickstart</span>
+      </a>
+    </li>
+  
+
+    
+    
+    
+    
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/" class="md-nav__link">
+        <span class="md-ellipsis">Customization</span>
+      </a>
+    </li>
+  
+
+    
+    
+    
+    
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/" class="md-nav__link">
+        <span class="md-ellipsis">Commands</span>
+      </a>
+    </li>
+  
+
+    
+    
+    
+    
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/" class="md-nav__link">
+        <span class="md-ellipsis">Deployment</span>
+      </a>
+    </li>
+  
+
+    
+    
+    
+    
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../"><span class="md-ellipsis">Examples</span></a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Examples</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admonitions/" class="md-nav__link">
+        <span class="md-ellipsis">Admonitions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../api-docs/"><span class="md-ellipsis">API docs</span></a>
+          
+            <label for="__nav_6_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="API docs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">API docs</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_1" type="checkbox" id="__nav_6_2_1" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../api-docs/#sample-references"><span class="md-ellipsis">Sample references</span></a>
+          
+            <label for="__nav_6_2_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Sample references" data-md-level="3">
+        <label class="md-nav__title" for="__nav_6_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Sample references</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_1_1" type="checkbox" id="__nav_6_2_1_1" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../python_api/"><span class="md-ellipsis">API Reference</span></a>
+          
+            <label for="__nav_6_2_1_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="API Reference" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">API Reference</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_1_1_1" type="checkbox" id="__nav_6_2_1_1_1" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../python_api/python/python/"><span class="md-ellipsis">python</span></a>
+          
+            <label for="__nav_6_2_1_1_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="python" data-md-level="5">
+        <label class="md-nav__title" for="__nav_6_2_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">python</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_1_1_1_1" type="checkbox" id="__nav_6_2_1_1_1_1" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../python_api/python/python/#submodules"><span class="md-ellipsis">Submodules</span></a>
+          
+            <label for="__nav_6_2_1_1_1_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Submodules" data-md-level="6">
+        <label class="md-nav__title" for="__nav_6_2_1_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Submodules</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_api/python/python.mymodule/" class="md-nav__link">
+        <span class="md-ellipsis">python.<wbr>mymodule</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_1_2" type="checkbox" id="__nav_6_2_1_2" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../cpp_api/library_root/"><span class="md-ellipsis">CPP API reference</span></a>
+          
+            <label for="__nav_6_2_1_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="CPP API reference" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">CPP API reference</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_1_2_1" type="checkbox" id="__nav_6_2_1_2_1" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../cpp_api/library_root/#full-api"><span class="md-ellipsis">Full API</span></a>
+          
+            <label for="__nav_6_2_1_2_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Full API" data-md-level="5">
+        <label class="md-nav__title" for="__nav_6_2_1_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Full API</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_1_2_1_1" type="checkbox" id="__nav_6_2_1_2_1_1" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../cpp_api/library_root/#classes-and-structs"><span class="md-ellipsis">Classes and Structs</span></a>
+          
+            <label for="__nav_6_2_1_2_1_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Classes and Structs" data-md-level="6">
+        <label class="md-nav__title" for="__nav_6_2_1_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Classes and Structs</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp_api/classMyClass/" class="md-nav__link">
+        <span class="md-ellipsis">Class My<wbr>Class</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_1_3" type="checkbox" id="__nav_6_2_1_3" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../lua_api/"><span class="md-ellipsis">Lua API reference</span></a>
+          
+            <label for="__nav_6_2_1_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Lua API reference" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Lua API reference</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua_api/car/" class="md-nav__link">
+        <span class="md-ellipsis">car</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cards/" class="md-nav__link">
+        <span class="md-ellipsis">Cards</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">Code blocks</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">Code blocks</span>
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      <span class="md-ellipsis">Code blocks</span>
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">Syntax</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">Examples</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">Python</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bash" class="md-nav__link">
+    <span class="md-ellipsis">Bash</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    <span class="md-ellipsis">Java<wbr>Script</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">See also</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        <span class="md-ellipsis">Diagrams</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dropdowns/" class="md-nav__link">
+        <span class="md-ellipsis">Dropdowns</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../images/" class="md-nav__link">
+        <span class="md-ellipsis">Images</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        <span class="md-ellipsis">Links</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../substitutions/" class="md-nav__link">
+        <span class="md-ellipsis">Substitutions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables/" class="md-nav__link">
+        <span class="md-ellipsis">Tables</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tabs/" class="md-nav__link">
+        <span class="md-ellipsis">Tabs</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text/" class="md-nav__link">
+        <span class="md-ellipsis">Text</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+
+            <!-- Table of contents -->
+            
+              
+              <div
+                class="md-sidebar md-sidebar--secondary"
+                data-md-component="sidebar"
+                data-md-type="toc"
+                
+              >
+                
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      <span class="md-ellipsis">Code blocks</span>
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">Syntax</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">Examples</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">Python</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bash" class="md-nav__link">
+    <span class="md-ellipsis">Bash</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    <span class="md-ellipsis">Java<wbr>Script</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">See also</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+
+          <!-- Page content -->
+          
+            <div class="md-content" data-md-component="content">
+              <!-- sphinx-immaterial: Include role="main" for sphinx search -->
+              <article class="md-content__inner md-typeset" role="main">
+                <!-- sphinx-immaterial: make content of `body` block visible to `content.html` -->
+                  
+
+
+  <a href="https://github.com/bluerobotics/sphinx-blue-robotics-theme/blob/master/docs/source/examples/code-blocks.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+  </a>
+
+<h1 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Link to this heading">¶</a></h1>
+<p>Code blocks allow you to display code in your documentation with proper formatting and syntax highlighting.</p>
+<h2 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Link to this heading">¶</a></h2>
+<p>Code blocks in MyST Markdown are created using the triple backtick syntax. The general format is:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><code>```{language}
+Your code here
+```
+</code></pre></div>
+</div>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
+<h3 id="python">Python<a class="headerlink" href="#python" title="Link to this heading">¶</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><code>```{python}
+def hello_world():
+    print(&quot;Hello, world!&quot;)
+```
+</code></pre></div>
+</div>
+<p>Renders:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h3 id="bash">Bash<a class="headerlink" href="#bash" title="Link to this heading">¶</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><code>```{bash}
+echo &quot;Hello, world!&quot;
+```
+</code></pre></div>
+</div>
+<p>Renders:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, world!&quot;</span>
+</code></pre></div>
+</div>
+<h3 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Link to this heading">¶</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><code>```{javascript}
+console.log(&quot;Hello, world!&quot;);
+```
+</code></pre></div>
+</div>
+<p>Renders:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/code_and_apis.html">Myst Parser: Source code and APIs</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">Sphinx: reStructuredText Primer</a></p></li>
+</ul>
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      05 Mar 2025
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+
+          <!-- User preference: content -->
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+
+        <!-- Back-to-top button -->
+        
+          <a
+            href="#"
+            class="md-top md-icon"
+            data-md-component="top"
+            hidden
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+
+      <!-- Footer -->
+      
+        
+
+<!-- Footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+  
+  <nav class="md-footer__inner md-grid" aria-label="Footer" >
+
+    <!-- Link to previous page -->
+    
+    
+    <a href="../cards/" class="md-footer__link md-footer__link--prev"
+      aria-label="Previous: Cards" rel="prev">
+      <div class="md-footer__button md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </div>
+      <div class="md-footer__title">
+        <div class="md-ellipsis">
+          <span class="md-footer__direction">
+            Previous
+          </span>
+          Cards
+        </div>
+      </div>
+    </a>
+    
+
+    <!-- Link to next page -->
+    
+    
+    <a href="../diagrams/" class="md-footer__link md-footer__link--next"
+      aria-label="Next: Diagrams" rel="next">
+      <div class="md-footer__title">
+        <div class="md-ellipsis">
+          <span class="md-footer__direction">
+            Next
+          </span>
+          Diagrams
+        </div>
+      </div>
+      <div class="md-footer__button md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+      </div>
+    </a>
+    
+  </nav>
+  
+  
+
+  <!-- sphinx-immaterial: Define extracopyright block for inclusion in child template -->
+  
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      
+
+<!-- Copyright and theme information -->
+<div class="md-copyright">
+  
+  <span class="md-footer-copyright__highlight">
+    Copyright 2025 - Blue Robotics Inc
+    
+  </span>
+
+  <span class="footer-divider first">
+    |
+  </span>
+  <span>
+    <a href="https://bluerobotics.com/terms-conditions-privacy-policy-return-policy/" target="_blank">Terms &
+      Conditions</a>
+  </span>
+  <span class="footer-divider">
+    |
+  </span>
+  <span>
+    <a href="https://bluerobotics.com/terms-conditions-privacy-policy-return-policy/" target="_blank">Privacy Policy</a>
+  </span>
+  
+  <div class="show-sphinx">
+    
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    8.1.3
+     and
+    <a href="https://github.com/bluerobotics/sphinx-blue-robotics-theme/" target="_blank" rel="noopener">Sphinx Blue
+      Robotics Theme</a> 0.0.2.
+    
+  </div>
+</div>
+
+      <!-- Social links -->
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+
+    <!-- Dialog -->
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+
+    <!-- Consent -->
+    
+
+    <!-- Theme-related configuration -->
+    <!-- Versioning --><!-- Tags --><!-- Translations --><!-- Configuration -->
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.megamenu", "navigation.top", "toc.follow", "toc.sticky", "content.tabs.link", "announce.dismiss"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+
+    <!-- Theme-related JavaScript -->
+      
+      <!-- sphinx-immaterial: bundled JavaScript is added from `script_files -->
+      <!-- Custom JavaScript -->
+        <script src="../../_static/js/jquery.min.js?v=9c479fa5"></script>
+        <script src="../../_static/sphinx_immaterial_theme.f9d9eeeb247ace16c.min.js?v=8ec58cb5"></script>
+        <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+        <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+        <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+        <script src="../../_static/js/main.js?v=0a2e4203"></script>
+    
+  </body>
+</html>

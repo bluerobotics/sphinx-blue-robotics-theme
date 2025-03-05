@@ -1,0 +1,34 @@
+:py:mod:`python.mymodule`
+=========================
+
+.. py:module:: python.mymodule
+
+.. autodoc2-docstring:: python.mymodule
+   :allowtitles:
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. list-table::
+   :class: autosummary longtable
+   :align: left
+
+   * - :py:obj:`MyClass <python.mymodule.MyClass>`
+     - .. autodoc2-docstring:: python.mymodule.MyClass
+          :summary:
+
+API
+~~~
+
+.. py:class:: MyClass
+   :canonical: python.mymodule.MyClass
+
+   .. autodoc2-docstring:: python.mymodule.MyClass
+
+   .. py:method:: my_method()
+      :canonical: python.mymodule.MyClass.my_method
+
+      .. autodoc2-docstring:: python.mymodule.MyClass.my_method

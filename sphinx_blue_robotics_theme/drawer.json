@@ -1,0 +1,59 @@
+[
+    {
+        "title": "Docs",
+        "url": "https://docs.bluerobotics.com",
+        "children": [],
+        "active": false,
+        "current": false
+    },
+    {
+        "title": "Projects",
+        "url": "#",
+        "children": [
+            {
+                "title": "BlueOS",
+                "url": "#",
+                "children": [
+                    {"title": "BlueOS docs", "url": "https://blueos.cloud/docs/", "children": []},
+                    {"title": "Cockpit docs", "url": "https://blueos.cloud/cockpit/docs/", "children": []},
+                    {"title": "BlueOS Community (GitHub)", "url": "https://github.com/orgs/BlueOS-community/repositories", "children": []},
+                    {"title": "About BlueOS", "url": "hhttps://blueos.cloud/", "children": []}
+                ]
+            },
+            {
+                "title": "Navigator",
+                "url": "#",
+                "children": [
+                    {"title": "Navigator Libraries (Python)", "url": "#", "children": []},
+                    {"title": "Navigator Libraries (C++)", "url": "#", "children": []},
+                    {"title": "Navigator Libraries (Rust)", "url": "#", "children": []},
+                    {"title": "See Navigator Product", "url": "https://bluerobotics.com/store/comm-control-power/control/navigator/", "children": []}
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Community",
+        "url": "#",
+        "children": [
+            {
+                "title": "Blue Robotics",
+                "url": "#",
+                "children": [
+                    {"title": "About Blue Robotics", "url": "https://bluerobotics.com/about/", "children": []},
+                    {"title": "Visit the Store", "url": "https://bluerobotics.com/store/", "children": []},
+                    {"title": "Blue Robotics Guides", "url": "https://bluerobotics.com/learn/", "children": []},
+                    {"title": "Blue Robotics Github", "url": "https://github.com/bluerobotics", "children": []}
+                ]
+            },
+            {
+                "title": "Support",
+                "url": "#",
+                "children": [
+                    {"title": "Blue Robotics Forum", "url": "https://discuss.bluerobotics.com/", "children": []},
+                    {"title": "Blue Robotics Support", "url": "https://bluerobotics.com/help/", "children": []}
+                ]
+            }
+        ]
+    }
+]

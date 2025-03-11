@@ -52,6 +52,7 @@ preview: setup
 # Testing commands
 .PHONY: test
 test: setup
+	$(SPHINXBUILD) -b dirhtml $(TESTSPHINXOPTS) $(BUILDDIR)/dirhtml
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
 
 .PHONY: linkcheck

@@ -106,7 +106,7 @@ To publish a new version of the documentation, follow these steps:
 
 3. Once the workflow completes successfully, the new version will be deployed. If the workflow fails, review the logs to identify and resolve any issues.
 
-### Set the default version
+### Set the default version
 
 In the `docs/versions.json` file, you can specify the default version. This version will be used to redirect the root of the domain to the selected version. Only one version can be set as the default at a time.
 

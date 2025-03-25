@@ -33,9 +33,14 @@ To install the code generation support, you'll need to:
 
 ## Python docs generation
 
-For Python, Sphinx can use the `sphinx-autodoc2` extension to generate documentation directly from Python docstrings. This extension extracts relevant information from classes, functions, and methods.
+For Python, you can use the `sphinx-autodoc2` extension to generate documentation directly from Python docstrings.
+This extension extracts relevant information from classes, functions, and methods.
 
-Given the following Python code:
+```{note}  
+This extension work with [Google Style Python Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html). If using Doxygen-style comments, refer to the {ref}`doxygen` generator.  
+```
+
+For example, given the following Python class:
 
 ```python
 class MyClass:
@@ -69,7 +74,7 @@ autodoc2_packages = [
 autodoc2_output_dir = "python_api"
 ```
 
-You can reference this class and its methods using the `automodule` directive:
+You can reference this class and its methods using the `automodule` directive in your Markdown files:
 
 ````markdown
 ```{autodoc2-object} python.mymodule.MyClass
@@ -87,13 +92,16 @@ Additionally, setting the configuration option `autodoc2_packages[auto_mode]` to
 
 For more details, refer to the [sphinx-autodoc2 documentation](https://sphinx-autodoc2.readthedocs.io/en/latest/).
 
-## C++ docs generation
+(doxygen)=
 
-For C++, you can use tools like Doxygen, which generates XML output from your C++ code. This XML can then be processed by Sphinx with the `breathe` and `exhale` extensions to create formatted documentation.
+## C++ & Doxygen docs generation
+
+Doxygen is a versatile tool for generating documentation from source code comments. While the ttheme mainly supports it for C++ projects, it also supports languages like Python, Java, and C. 
+When combined with Sphinx, the `breathe` and `exhale` extensions allow you to generate well-structured, formatted documentation from Doxygen's XML output.
 
 :::{important}
-If you're generating API docs with Doxygen, you'll need to have doxygen installed in your system.
-Also, remember to include the installation instructions in the GitHub Action worflow in the build process:
+If you're generating API documentation with Doxygen, ensure that Doxygen is installed on your system.
+Additionally, include the installation step in the GitHub Actions workflow for the build process:
 
 ```
 - name: Install Doxygen (optional)
@@ -134,9 +142,7 @@ author = "Blue Robotics Project Contributors"
 # General configuration
 extensions = [
     "(...)",
-    "breathe",
-    "exhale",
-
+    "sphinx_blue_robotics_theme.extensions.python",
 ]
 
 # Breathe configuration (CPP documentation)
@@ -155,14 +161,14 @@ exhale_args = {
 }
 ```
 
-You can reference and generate documentation for this C++ code as follows:
+You can reference and generate documentation for this C++ code as follows in your Markdown files:
 
 ````md
 ```{doxygenfile} my_class.h
 ```
 ````
 
-And `breathe` will render the documentation for the `MyClass` class, including method definitions and comments from your C++ code. For example, the previous example renders:
+This will automatically generate documentation for the `MyClass` class and its methods. For example, the previous example renders:
 
 ```{doxygenfile} my_class.h
 :no-link:
@@ -190,7 +196,6 @@ end
 
 And the following configuration in `conf.py`:
 
-
 ```
 # General configuration
 extensions = [
@@ -215,7 +220,7 @@ You can generate documentation for the `MyOrg.Car` class using the `lua:automodu
 ```
 ````
 
-This will render the documentation for the `MyOrg.Car` class ` method. For example, the previous example renders:
+This will render the documentation for the `MyOrg.Car` class and its methods. For example, the previous example renders:
 
 
 ```{lua:automodule} car

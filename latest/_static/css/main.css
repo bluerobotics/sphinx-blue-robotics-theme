@@ -1,6 +1,14 @@
 /* Overrides for the Sphinx Blue Robotics theme */
 
 /* General */
+@font-face {
+    font-family: 'Windsor-Bold';
+    src: url('../fonts/Windsor-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root > * {
     --theme-primary-color: #2c99ce;
     --theme-secondary-color: #012f46;
@@ -9,9 +17,11 @@
     --theme-dark-color: #1d252c;
     --theme-gray-color: #555555;
     --theme-hover-color: #0056b3;
+	--theme-card-color: #dee2e675;
 
 	--md-accent-fg-color: var(--theme-primary-color);
 	--md-primary-fg-color: var(--theme-primary-color);
+	--md-footer-bg-color--dark: #252525;
 	--sd-color-tabs-underline-active: var(--theme-primary-color);
 	--sd-color-tabs-label-active: var(--theme-primary-color);
 
@@ -19,6 +29,9 @@
 	--theme-h1-text-color: var(--theme-gray-color);
 	--theme-header-text-color: var(--theme-black-color);
 	--theme-heading-text-color: var(--theme-dark-color);
+	--theme-hero-bg-color: var(--theme-primary-color);
+	--theme-card-bg-color: var(--theme-card-color);
+	--theme-icon-color: var(--theme-dark-color);
 }
 
 :root body[data-md-color-scheme="slate"] {
@@ -26,7 +39,11 @@
 	--theme-h1-text-color: var(--theme-white-color);
 	--theme-header-text-color: var(--theme-white-color);
 	--theme-heading-text-color: var(--theme-white-color);
+	--theme-hero-bg-color: var(--theme-secondary-color);
+	--theme-card-bg-color: var(--theme-secondary-color);
+	--theme-icon-color: var(--theme-white-color);
 }
+
 
 .md-typeset :target {
 	--md-scroll-margin: 5rem;
@@ -172,6 +189,7 @@ body[data-md-color-scheme="slate"] .md-header--shadow {
 		margin-left: auto;
 	}
 }
+
 
 /* Drawer */
 .md-nav--primary .md-nav__title[for=__drawer] {
@@ -380,6 +398,144 @@ html .md-footer-meta.md-typeset a .show-sphinx a {
     }
 }
 
+/* Hero */
+.br-hero {
+    background-color: var(--theme-hero-bg-color);
+    color: white;
+    padding: 2.5rem 1rem;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.br-hero[style*="background-image"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.br-hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 61rem;
+    margin: 0 auto;
+}
+
+h1.br-hero-title,
+h2.br-hero-title,
+h3.br-hero-title,
+h4.br-hero-title,
+h5.br-hero-title,
+h6.br-hero-title  {
+    font-family: 'Windsor-Bold', sans-serif;
+    font-size: 2.25rem;
+	color: var(--theme-white-color);
+    line-height: 1.2;
+    margin: 0;
+    font-weight: 700;
+}
+
+.br-hero-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.br-hero-cta {
+    margin-bottom: 2rem;
+}
+
+.br-hero-cta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.br-hero-cta-primary {
+    background-color: white;
+    color: rgb(44, 153, 206);
+}
+
+.br-hero-cta-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+    .br-hero {
+        padding: 3rem 2rem;
+    }
+
+
+	h1.br-hero-title,
+	h2.br-hero-title,
+	h3.br-hero-title,
+	h4.br-hero-title,
+	h5.br-hero-title,
+	h6.br-hero-title  {
+		font-size: 3rem;
+        max-width: 800px;
+    }
+
+    .br-hero-description {
+        font-size: 1rem;
+        max-width: 600px;
+    }
+
+    .br-hero-cta a {
+        font-size: 1rem;
+    }
+}
+
+/* Landing page hero */
+.br-hero-landing {
+    display: flex;
+    align-items: center;
+    margin: -5.5rem calc(50% - 50vw) 0; /* Compensate for .md-main__inner margin */
+}
+
+.br-hero-landing .br-hero-container {
+    width: 100%;
+}
+
+/* Card */
+.sd-card {
+	background-color: var(--theme-card-bg-color);
+	border: 3px solid var(--theme-card-bg-color);
+	box-shadow: none !important;
+	border-radius: 0px;
+}
+
+.sd-card:hover {
+	border: 3px solid var(--theme-primary-color);
+} 
+
+.sd-card strong {
+	font-size: 1rem;
+}
+
+.sd-card .md-icon:before {
+	width: 32px;
+	height: 32px;
+	background-color: var(--theme-icon-color);
+}
 
 /* Dark mode */
 body[data-md-color-scheme="slate"] .show-slate,

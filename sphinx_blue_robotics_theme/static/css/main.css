@@ -294,6 +294,11 @@ body[data-md-color-scheme="slate"] .md-header--shadow {
 	display: none;
 }
 
+/* Hide third level of secondary sidebar onwards */
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list {
+    display: none;
+}
+
 /* Content */
 article h1,
 .md-typeset h1 {
